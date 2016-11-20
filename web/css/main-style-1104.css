@@ -1,0 +1,228 @@
+/*****jsp의 style을 옮김 */
+#header-wrapper {
+    display: flex;
+    /*****max-width: 1100px; 제거*/
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+    align-content: center;	/*****jsp의 style을 옮김 */
+    text-align: center; 	/*****jsp의 style을 옮김 */
+    width:100%;				/***** 신규 */
+    white-space: nowrap;	/***** 신규 */
+	background: #f3f3f3;	/***** 신규 */
+	
+}
+
+/*jsp의 style을 옮김 */
+#header-wrapper h1{
+    margin: 0 auto; 
+    padding: 20px 0 20px 0;
+}
+
+#nav-wrapper {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px 0 15px;
+    border: 0;
+    border-top: 5px rgba(220, 220, 220, 1) solid;
+    background: rgba(91, 146, 206, 1);
+    /*****min-width: 1000px; 조정*/
+}
+
+#nav {
+    /*width: 970px;*/
+    /*max-width: 1100px;*/
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+    height: 80px;
+    color: white;
+}
+
+.header-button {
+    background: rgba(91, 146, 206, 1);
+    float: left;
+    width: 20%;
+    height: 80px;
+    color: rgba(165, 197, 230, 1);
+}
+
+.header-button:active, .header-button.active {
+    background: rgba(116, 168, 226, 1);
+    color: rgba(240, 240, 240, 1);
+
+}
+
+.header-button:hover {
+    background: rgba(116, 168, 226, 1);
+    color: rgba(255, 255, 255, 1);
+}
+
+.header-button:focus {
+    background: rgba(116, 168, 226, 1);
+    color: rgba(255, 255, 255, 1);
+}
+
+#content {
+    width: 100%;
+    margin-top: 15px;
+    /*min-width: 768px;*/
+}
+
+#content-wrapper {
+    margin: 0 auto;
+    min-width: 500px;
+}
+
+#progress-wrapper {
+    padding: 10px 10px 0 10px;
+}
+
+#search-input-wrapper {
+}
+
+/*****jsp의 style을 옮김 */
+#search-wrapper {
+	width:100%;
+}
+
+/*****jsp의 style을 옮김 */
+#search-result-number {
+	display: block; 
+	width:170px; /*****조정*/
+	float:left;
+}
+
+/*****jsp의 style을 옮김 */
+#search-progress {
+	/***** width:70%;  조정*/
+	margin-bottom: 0;
+ }
+
+
+#search-option-radio-wrapper {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/*****jsp의 style을 옮김 */
+#search {
+	width: 333px;
+    height: 100%;
+	min-width:333px; 
+	max-width:333px; 
+	background: rgba(239, 239, 239, 1); 
+	/*****overflow: scroll; 조정*/
+	overflow-y: scroll;		/***** 신규 */
+	overflow-x: hidden;		/***** 신규 */
+    height: 100%;
+}
+
+#content {
+    height: 100%;
+}
+
+#book-table {
+    /*width: 1000px;*/
+    margin: 0;
+    padding: 0;
+    max-width: none;
+    table-layout: fixed;
+    position: relative;
+    border: 1px solid #ddd;
+}
+
+#header {
+    /*position: absolute;*/
+    top: 0;
+    background: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    /*display: table-row;*/
+}
+
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+    /*padding: 0;*/
+}
+
+#result-table-wrapper table th,
+#result-table-wrapper table td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+    /*min-width: 0;*/
+}
+
+#result-table-wrapper table td {
+    text-align: center;
+    text-overflow: ellipsis;
+}
+
+#book-table-header table th {
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    /*min-width: 0;*/
+}
+
+#result-table-wrapper {
+    position: relative;
+}
+
+#result-table-wrapper table td:nth-child(10),
+#result-table-wrapper table td:nth-child(11),
+#result-table-wrapper table td:nth-child(12) {
+    text-align: left;
+}
+
+/*#book-table-header{*/
+/*margin: 0!important;*/
+/*margin: 0;*/
+/*padding: 0;*/
+/*!*max-width: none;*!*/
+/*table-layout: fixed;*/
+/*}*/
+
+.dropdown-menu {
+    font-size: 11px;
+}
+
+body {
+    min-width: 700px;
+}
+
+.popover {
+    width: 280px;
+    max-width: 280px;
+    z-index: 9;
+}
+
+.bg-white {
+    background-color: #fefefe !important;
+}
+
+.popover .pagination-sm > li > a, .popover .pagination-sm > li > span, .popover .pagination > li > a, .popover .pagination > li > span {
+    font-size: 10px;
+}
+
+.border-gray {
+    border: 2px solid #efefef;
+}
+
+.relative-table-wrapper {
+    padding: 15px;
+}
+
+.relative-table-wrapper .close {
+    top: 10px;
+    right: 15px;
+}
+
+.relative-table-wrapper .relative-title {
+    background: #337ab7;
+    padding: 10px;
+    color: white;
+    border: 1px solid #cfcfcf; border-radius: 4px;
+}
