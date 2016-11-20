@@ -29,22 +29,9 @@ public class AdminController {
 
     @Autowired
     private SessionRepository sessionRepository;
-//
-//    @Autowired
-//    private ContractRepository contractRepository;
-//
-//    @Autowired
-//    private RecycleItemRepository recycleItemRepository;
-//
-//    @Autowired
-//    private ErrandCategoryRepository errandCategoryRepository;
-//
-//    @Autowired
-//    private ErrandItemRepository errandItemRepository;
 
     @RequestMapping(value = {""})
     public String adminLogin(ModelMap model, HttpServletRequest request) {
-//        System.out.println(sessionRepository.findByJSessionId(request.getSession().getId()).size());
         if (sessionRepository.findByJSessionId(request.getSession().getId()).size() > 0 && sessionRepository.findByJSessionId(request.getSession().getId()).get(0).getType().equals(UserType.ADMIN)) {
             return "redirect:" + "/admin/main";
         }
@@ -59,7 +46,6 @@ public class AdminController {
         String password = request.getParameter("password");
         if (adminAccountRepository.findAll().size() <= 0) {
             adminAccountRepository.save(new AdminAccount(userId, username, password));
-//            saveDefaultValue();
         }
         return "redirect:" + "/admin";
     }
@@ -222,7 +208,6 @@ public class AdminController {
         } catch (Exception e) {
             return "redirect:" + "/error";
         }
-//            saveDefaultValue();
         return "redirect:" + "/admin/user";
     }
 }

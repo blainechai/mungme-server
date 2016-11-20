@@ -23,14 +23,6 @@ public class AdminAccount implements Serializable {
     protected AdminAccount() {
     }
 
-//    public AdminAccount(String userId, String userName, String organization, String password) {
-//        this.userId = userId;
-//        this.userName = userName;
-//        this.organization = organization;
-//        this.password = password;
-//        this.createDate = new Date(new java.util.Date().getTime());
-//    }
-
     public AdminAccount(String userId, String username, String password) {
         this.userId = userId;
         this.username = username;

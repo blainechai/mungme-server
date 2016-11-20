@@ -19,8 +19,6 @@ import java.util.List;
 @Controller
 @RequestMapping("")
 public class MainPageController {
-    //    @RequestMapping(value = "/add", method = RequestMethod.POST)
-//    public ModelAndView
     @Autowired
     private SessionRepository sessionRepository;
 

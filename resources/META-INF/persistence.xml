@@ -5,10 +5,10 @@
         http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
              version="2.0">
 
-    <persistence-unit name="jpa.unit">
-        <class>com.mungme.domain.AdminAccount</class>
-        <class>com.mungme.domain.UserAccount</class>
-        <class>com.mungme.domain.Session</class>
-        <exclude-unlisted-classes>true</exclude-unlisted-classes>
-    </persistence-unit>
+<persistence-unit name="jpa.unit">
+    <class>com.mungme.domain.AdminAccount</class>
+    <class>com.mungme.domain.UserAccount</class>
+    <class>com.mungme.domain.Session</class>
+    <exclude-unlisted-classes>true</exclude-unlisted-classes>
+</persistence-unit>
 </persistence>
