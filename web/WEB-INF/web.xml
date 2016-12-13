@@ -44,7 +44,7 @@
     </session-config>
 
     <listener>
-        <listener-class>com.mungme.listener.HttpSessionCheckingListener</listener-class>
+        <listener-class>com.peterpet.listener.HttpSessionCheckingListener</listener-class>
     </listener>
 
     <!--<security-constraint>-->

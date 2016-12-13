@@ -1,12 +1,11 @@
 package test;
 
-import com.mungme.util.EncryptUtil;
 import org.junit.Test;
 
 import java.io.FileWriter;
 
 /**
- * Created by mungme on 2016. 9. 7..
+ * Created by peterpet on 2016. 9. 7..
  */
 public class HashTest {
 //    @Autowired

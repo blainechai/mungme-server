@@ -1,11 +1,22 @@
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 
-.header-info {
+.header-info-container {
     width: 100%;
-    height: 80px;
-    object-fit: contain;
     background-color: #3e4261;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.24), 0 0 4px 0 rgba(0, 0, 0, 0.12);
+    height: 80px;
+    position: relative;
+}
+
+.header-info {
+    width: 1200px;
+    height: 80px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.header-menu-container {
+    display: flex;
 }
 
 .header-info-logo {
@@ -47,7 +58,8 @@
 
 .header-info-logout > a:hover {
     text-decoration: none;
-    color: #9ea0b2;
+    /*color: #9ea0b2;*/
+    color: #fff;
 }
 
 .header-info span {
@@ -55,16 +67,27 @@
 }
 
 .header-menu {
-    padding-top: 19px;
-    height: 114px;
+    height: 132px;
     cursor: pointer;
+    width: 1180px;
+    margin: 0 auto;
 }
 
+/*.header-btn:first-child {*/
+/*width: calc(14.285714285714285% - 2px);*/
+/*}*/
+
 .header-btn {
+    padding-top: 19px;
     width: calc(14.285714285714285% - 1px);
-    height: 95px;
+    height: 132px;
     float: left;
     position: relative;
+    text-align: center;
+}
+
+.header-btn:hover {
+    background: rgba(50, 50, 50, 0.1);
 }
 
 .header-btn img {
@@ -74,13 +97,14 @@
 
 .header-menu-separator {
     width: 1px;
+    margin-top: 23px;
     height: 85px;
     object-fit: contain;
     background-color: #d5d5d5;
     float: left;
 }
 
-.header-btn-title{
+.header-btn-title {
     font-family: "Nanum Gothic";
     font-size: 15px;
     font-weight: 500;
@@ -88,5 +112,14 @@
     font-stretch: normal;
     color: rgba(66, 66, 66, 0.87);
     position: absolute;
-    bottom:10px;
+    bottom: 23px;
 }
+
+.category-nav {
+
+}
+
+.left-menu-container {
+
+}
+

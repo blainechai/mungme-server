@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="65px" height="62px" viewBox="0 0 65 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 39 (31667) - http://www.bohemiancoding.com/sketch -->
+    <title>0CC74737-D557-4AE7-ACA3-B2DEDE53DB25</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="57" height="53.2578125"></rect>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.676073554   0 0 0 0 0.676073554   0 0 0 0 0.676073554  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="매장관리_기본정보관리" transform="translate(-531.000000, -309.000000)">
+            <g id="Group-3" transform="translate(535.000000, 311.000000)">
+                <g id="Rectangle-2-Copy-6">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#FBFBFB" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <path d="M33.8691899,23.2776285 L32.7343205,23.2776285 L32.3398319,23.6692585 C33.7334058,25.29438 34.5809845,27.4011777 34.5809845,29.7095077 C34.5809845,34.8407181 30.4217026,39 25.2904923,39 C20.1592819,39 16,34.8407181 16,29.7095077 C16,24.5782974 20.1592819,20.4190155 25.2904923,20.4190155 C27.5988223,20.4190155 29.7041907,21.2651649 31.3293122,22.6573095 L31.7238008,22.2656795 L31.7238008,21.1336687 L38.8674747,14 L40.9985707,16.131096 L33.8691899,23.2776285 L33.8691899,23.2776285 Z M25.2904923,23.2776285 C21.7372363,23.2776285 18.858613,26.1562518 18.858613,29.7095077 C18.858613,33.2613344 21.7372363,36.141387 25.2904923,36.141387 C28.8423189,36.141387 31.7223715,33.2613344 31.7223715,29.7095077 C31.7223715,26.1562518 28.8423189,23.2776285 25.2904923,23.2776285 L25.2904923,23.2776285 Z" id="Shape" fill="#BEBEBE" transform="translate(28.499285, 26.500000) scale(1, -1) translate(-28.499285, -26.500000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

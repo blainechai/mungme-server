@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <% request.setCharacterEncoding("utf-8"); %>
 <% response.setContentType("text/html; charset=utf-8"); %>
@@ -9,6 +9,9 @@
     <meta charset="utf-8">
     <title>Server Admin</title>
     <link href="/css/login.css" rel="stylesheet" type="text/css">
+
+
+    <script type="application/javascript" src="/js/jquery.min.js"></script>
 </head>
 <body>
 <div class="login">
@@ -40,7 +43,8 @@
                                name="phone">
                         <label class="login-field-icon fui-user"></label>
                     </div>
-                    <input type="submit" class="btn btn-primary btn-large btn-block" value="join" style="cursor: pointer;">
+                    <input type="submit" class="btn btn-primary btn-large btn-block" value="join"
+                           style="cursor: pointer;">
                 </div>
             </form>
         </div>
