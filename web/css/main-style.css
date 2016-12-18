@@ -5,6 +5,10 @@ body {
 
 /*#service-name-container*/
 
+.search-input {
+    padding-left: 10px;
+}
+
 .container {
     width: 1200px;
 }
@@ -48,10 +52,6 @@ body {
     top: 19px;
 }
 
-.footer {
-
-}
-
 .right-content-container {
     position: relative;
 }
@@ -83,6 +83,11 @@ body {
     margin: 0 17px 0 17px;
     color: rgba(90, 90, 90, 0.56);
     font-size: 10px;
+}
+
+.sub-menu-container {
+    display: inline-block;
+    margin-bottom: 20px;
 }
 
 .sub-menu-name-container {
@@ -143,6 +148,9 @@ body {
     float: left;
     width: 100%;
     box-shadow: 1px 1px 2px 0 rgba(183, 183, 183, 0.5);
+    border-collapse: collapse;
+    border-top: 1px solid #dbdbdb;;
+    border-left: 1px solid #dbdbdb;;
     display: inline-block;
 }
 
@@ -151,20 +159,105 @@ body {
 /*display: inline-block;*/
 /*}*/
 .input-title-container {
-    width: 160px;
+    width: 159px;
     height: 45px;
     background-color: #eaeaea;
     float: left;
+    font-family: NanumGothic;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: -0.2px;
+    color: rgba(66, 66, 66, 0.7);
+    vertical-align: middle;
+    padding: 14px 0 15px 14px;
+    /*padding-left: 15px;*/
 }
 
 .input-content-container {
     width: 780px;
     height: 45px;
     background-color: #f9f9f9;
-
     float: left;
 }
 
 .input-table-td {
-    border: solid 1px #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;;
+    border-right: 1px solid #dbdbdb;;
+    /*border: solid 1px #dbdbdb;*/
+}
+
+.save-btn-container {
+    /*width:100%;*/
+    /*display: inline-block;*/
+    margin: 30px 0 63px 0;
+    text-align: center;
+
+}
+
+.save-btn {
+    width: 156.8px;
+    height: 52px;
+    object-fit: contain;
+    border-radius: 5px;
+    background-color: #ed5565;
+    box-shadow: 1px 1px 1px 0 rgba(104, 104, 104, 0.5);
+    border: solid 1px #bfbfbf;
+    font-family: NanumGothic;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: -0.2px;
+    color: rgba(255, 255, 255, 0.87);
+    margin: 0 auto;
+}
+
+.save-btn:hover {
+    /*color: rgba(66, 66, 66, 0.7);*/
+}
+
+.footer-container {
+    height: 150px;
+}
+
+.footer {
+    height: 150px;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.left-footer {
+    background-color: #d8d8d8;
+    height: 150px;
+    padding: 20px 0 20px 50px;
+}
+
+.right-footer {
+    background-color: #eaeaea;
+    height: 150px;
+    padding: 20px 0 20px 0;
+}
+
+.service-name {
+    font-family: 'Nanum Gothic';
+    font-size: 15px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    color: rgba(66, 66, 66, 0.87);
+}
+
+.service-detail {
+    font-family: 'Nanum Gothic';
+    font-size: 15px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.33;
+    text-align: center;
+    color: rgba(149, 149, 149, 0.87);
+    width: 661px;
+    margin: 0 auto;
 }

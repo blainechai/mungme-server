@@ -80,7 +80,7 @@
                 </div>
             </div>
             <div class="search-input-container">
-                <input id="search-input" type="text"
+                <input id="search-input" type="text" class="search-input"
                        style="width: 165px;height: 53.3px;object-fit: contain;background-color: #fbfbfb;box-shadow: 0 2px 4px 0 rgba(172, 172, 172, 0.5);border: 0;">
                 <img src="/imgs/search-icon.png" alt="search"
                      style="height: 62px;object-fit: contain;position: absolute;right: -3px;top: -2px;">
@@ -114,11 +114,23 @@
                 </div>
                 <div class="input-table">
                     <div class="input-table-row">
-                        <div class="input-title-container input-table-td"></div>
+                        <div class="input-title-container input-table-td">상점명</div>
                         <div class="input-content-container input-table-td"></div>
                     </div>
                     <div class="input-table-row">
-                        <div class="input-title-container input-table-td"></div>
+                        <div class="input-title-container input-table-td">관리자명</div>
+                        <div class="input-content-container input-table-td"></div>
+                    </div>
+                    <div class="input-table-row">
+                        <div class="input-title-container input-table-td">상점 아이디</div>
+                        <div class="input-content-container input-table-td"></div>
+                    </div>
+                    <div class="input-table-row">
+                        <div class="input-title-container input-table-td">관리자 이메일</div>
+                        <div class="input-content-container input-table-td"></div>
+                    </div>
+                    <div class="input-table-row">
+                        <div class="input-title-container input-table-td">관리자 휴대전화</div>
                         <div class="input-content-container input-table-td"></div>
                     </div>
                 </div>
@@ -131,10 +143,111 @@
                 <div class="sub-menu-description">
                     - 실제 운영될 상점 사업자 정보 및 대표 연락처를 입력할 수 있으며, 입력한 정보는 상점 화면에 노출됩니다.
                 </div>
+                <div class="input-table">
+                    <div class="input-table-row">
+                        <div class="input-title-container input-table-td">사업자등록번호</div>
+                        <div class="input-content-container input-table-td"></div>
+                    </div>
+                    <div class="input-table-row">
+                        <div class="input-title-container input-table-td">상호(법인명)</div>
+                        <div class="input-content-container input-table-td"></div>
+                    </div>
+                    <div class="input-table-row">
+                        <div class="input-title-container input-table-td">대표자 성명</div>
+                        <div class="input-content-container input-table-td"></div>
+                    </div>
+                    <div class="input-table-row">
+                        <div class="input-title-container input-table-td">업태</div>
+                        <div class="input-content-container input-table-td"></div>
+                    </div>
+                    <div class="input-table-row">
+                        <div class="input-title-container input-table-td">종목</div>
+                        <div class="input-content-container input-table-td"></div>
+                    </div>
+                    <div class="input-table-row">
+                        <div class="input-title-container input-table-td">사업장 주소</div>
+                        <div class="input-content-container input-table-td"></div>
+                    </div>
+                    <div class="input-table-row">
+                        <div class="input-title-container input-table-td">종목</div>
+                        <div class="input-content-container input-table-td"></div>
+                    </div>
+                    <div class="input-table-row">
+                        <div class="input-title-container input-table-td">사업장 주소</div>
+                        <div class="input-content-container input-table-td"></div>
+                    </div>
+                    <div class="input-table-row">
+                        <div class="input-title-container input-table-td">사업장 주소</div>
+                        <div class="input-content-container input-table-td"></div>
+                    </div>
+                    <div class="input-table-row">
+                        <div class="input-title-container input-table-td">사업장 주소</div>
+                        <div class="input-content-container input-table-td"></div>
+                    </div>
+                    <div class="input-table-row">
+                        <div class="input-title-container input-table-td">대표 전화</div>
+                        <div class="input-content-container input-table-td"></div>
+                    </div>
+                    <div class="input-table-row">
+                        <div class="input-title-container input-table-td">대표 팩스</div>
+                        <div class="input-content-container input-table-td"></div>
+                    </div>
+                    <div class="input-table-row">
+                        <div class="input-title-container input-table-td">대표 이메일</div>
+                        <div class="input-content-container input-table-td"></div>
+                    </div>
+                    <div class="input-table-row">
+                        <div class="input-title-container input-table-td">매장 홈페이지</div>
+                        <div class="input-content-container input-table-td"></div>
+                    </div>
+                    <div class="input-table-row">
+                        <div class="input-title-container input-table-td">통신판매업 신고</div>
+                        <div class="input-content-container input-table-td"></div>
+                    </div>
+                    <div class="input-table-row">
+                        <div class="input-title-container input-table-td">통신판매신고 번호</div>
+                        <div class="input-content-container input-table-td"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="sub-menu-container">
+                <div class="sub-menu-name-container">
+                    <div style="width: 4px;height: 18px;object-fit: contain;background-color: #ed5565;float: left;margin-top: 2px;margin-right: 15px;"></div>
+                    상점 사업자 정보 설정
+                </div>
+                <div class="sub-menu-description">
+                    - 실제 운영될 상점 사업자 정보 및 대표 연락처를 입력할 수 있으며, 입력한 정보는 상점 화면에 노출됩니다.
+                </div>
+                <div class="input-table">
+                    <div class="input-table-row">
+                        <div class="input-title-container input-table-td">모바일 표시여부</div>
+                        <div class="input-content-container input-table-td"></div>
+                    </div>
+                    <div class="input-table-row">
+                        <div class="input-title-container input-table-td">서비스 문의 안내</div>
+                        <div class="input-content-container input-table-td"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="save-btn-container">
+                <button class="btn save-btn">저장</button>
             </div>
         </div>
     </div>
 </div>
-<div class="footer"></div>
+<div class="footer-container">
+    <div class="footer">
+        <div class="left-footer col-xs-3">
+            <div class="service-name">펫살롱</div>
+        </div>
+        <div class="right-footer col-xs-12">
+            <div class="service-detail">(주) 정 코스메틱 | 대표 : 배세철 | 전화:1661-3758
+                사업자등록번호 : 309-88-00093 | Fax : 0505-507-3720｜e-mail : jungcosmetic@jungco.co.kr
+                주소 : 충청남도 아산시 신창면 순천향로 22, 5층 B501호 순천향대학교 내 산학협력관
+                통신판매업신고번호 : 제 2015-충남아산-0179호 | 개인정보관리자 : 배세철
+                Copyright (C) 2015 JUNG COSMETICS. All rights Reserved. Created by Neversunset Technology.</div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
