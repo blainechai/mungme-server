@@ -1,4 +1,4 @@
-package com.peterpet.controller;
+package com.peterpet.controller.admin;
 
 import com.peterpet.constant.UserType;
 import com.peterpet.domain.*;
@@ -43,9 +43,9 @@ public class AdminController {
         }
         if (fm != null) {
             String message = (String) fm.get("loginFail");
-            return new ModelAndView("admin_login").addObject("loginFail", message);
+            return new ModelAndView("admin/admin_login").addObject("loginFail", message);
         } else {
-            return new ModelAndView("admin_login")
+            return new ModelAndView("admin/admin_login")
                     .addObject("adminAccountSize", userAccountRepository.findByType(UserType.ADMIN).size())
                     .addObject("loginFail", "false");
 
@@ -109,7 +109,7 @@ public class AdminController {
     @RequestMapping(value = "/admin-account")
     public ModelAndView list() {
         List<UserAccount> adminList = userAccountRepository.findByType(UserType.ADMIN);
-        ModelAndView modelAndView = new ModelAndView("admin_administrator_list");
+        ModelAndView modelAndView = new ModelAndView("admin/admin_administrator_list");
 //        modelAndView.addObject("adminList", adminList);
         return modelAndView;
     }
@@ -180,7 +180,7 @@ public class AdminController {
         } else {
             adminList = new ArrayList<UserAccount>();
         }
-        ModelAndView modelAndView = new ModelAndView("admin_administrator_list");
+        ModelAndView modelAndView = new ModelAndView("admin/admin_administrator_list");
         modelAndView.addObject("adminList", adminList);
         return modelAndView;
     }
@@ -194,7 +194,7 @@ public class AdminController {
         // user_bookmark -> userId
         // user_group -> userId
         // user_search_history -> userId
-        // user_table_option -> user Id
+        // user_table_option -> shop Id
 //        String userIdOrg = sessionRepository.findByJSessionId(request.getSession().getId()).get(0).getUserId();
 
         Gson gson = new Gson();
@@ -312,7 +312,7 @@ public class AdminController {
 
     @RequestMapping(value = "/user")
     public ModelAndView userList() {
-        ModelAndView modelAndView = new ModelAndView("admin_user_list");
+        ModelAndView modelAndView = new ModelAndView("admin/admin_user_list");
         modelAndView.addObject("adminList", getAllUserAccountApis());
         return modelAndView;
     }
@@ -345,7 +345,7 @@ public class AdminController {
         return modelAndView;
     }
 
-//    @RequestMapping(value = "/user/modify", method = RequestMethod.POST)
+//    @RequestMapping(value = "/shop/modify", method = RequestMethod.POST)
 //    public ModelAndView userModify(HttpServletRequest request) {
 //        String userId = request.getParameter("userId");
 //        ModelAndView modelAndView = new ModelAndView("api");
@@ -357,7 +357,7 @@ public class AdminController {
 //            modelAndView.addObject("adminInfo", getUserAccountApi(userAccount));
 //            modelAndView.addObject("groupNames", groupNames);
 //        } catch (ArrayIndexOutOfBoundsException e) {
-//            modelAndView = new ModelAndView("redirect:" + "/admin/user");
+//            modelAndView = new ModelAndView("redirect:" + "/admin/shop");
 //        }
 //        return modelAndView;
 //    }
@@ -370,7 +370,7 @@ public class AdminController {
         // user_bookmark -> userId
         // user_group -> userId
         // user_search_history -> userId
-        // user_table_option -> user Id
+        // user_table_option -> shop Id
         try {
             String userId = request.getParameter("userId");
 //            commonBookmarkRepository.deleteByUserAccount_UserId(userId);
@@ -399,7 +399,7 @@ public class AdminController {
         // user_bookmark -> userId
         // user_group -> userId
         // user_search_history -> userId
-        // user_table_option -> user Id
+        // user_table_option -> shop Id
 
         String userId = request.getParameter("userId");
         String username = request.getParameter("username");
@@ -578,7 +578,7 @@ public class AdminController {
         }
     }
 
-    @RequestMapping(value = "/user-group/get")
+    @RequestMapping(value = "/shop-group/get")
     public ModelAndView userGroupGet(HttpServletRequest request) {
         String userId = request.getParameter("userId");
         Gson gson = new Gson();

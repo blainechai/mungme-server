@@ -1,4 +1,4 @@
-package com.peterpet.controller;
+package com.peterpet.controller.shop;
 
 import com.peterpet.repository.SessionRepository;
 import com.peterpet.repository.UserAccountRepository;
@@ -13,32 +13,32 @@ import javax.servlet.http.HttpServletRequest;
  * Created by blainechai on 2016. 12. 18..
  */
 @Controller
-@RequestMapping("user")
-public class UserController {
+@RequestMapping("main/shop")
+public class ShopMController {
+
     @Autowired
     private SessionRepository sessionRepository;
 
     @Autowired
     private UserAccountRepository userAccountRepository;
 
+    @RequestMapping(value = {""})
+    public ModelAndView mainPage(HttpServletRequest request) {
+
+        String sessionId = request.getSession().getId();
+        String userId = sessionRepository.findByJSessionId(sessionId).get(0).getUserId();
+        ModelAndView modelAndView = new ModelAndView("home/user_main");
+        modelAndView.addObject("userId", userId);
+        modelAndView.addObject("userType", sessionRepository.findByJSessionId(sessionId).get(0).getType());
+        return modelAndView;
+    }
 
     @RequestMapping(value = {"common"})
     public ModelAndView commonPage(HttpServletRequest request) {
 
         String sessionId = request.getSession().getId();
         String userId = sessionRepository.findByJSessionId(sessionId).get(0).getUserId();
-        ModelAndView modelAndView = new ModelAndView("user_main");
-        modelAndView.addObject("userId", userId);
-        modelAndView.addObject("userType", sessionRepository.findByJSessionId(sessionId).get(0).getType());
-        return modelAndView;
-    }
-
-    @RequestMapping(value = {"resource"})
-    public ModelAndView resourcePage(HttpServletRequest request) {
-
-        String sessionId = request.getSession().getId();
-        String userId = sessionRepository.findByJSessionId(sessionId).get(0).getUserId();
-        ModelAndView modelAndView = new ModelAndView("user_main");
+        ModelAndView modelAndView = new ModelAndView("home/user_main");
         modelAndView.addObject("userId", userId);
         modelAndView.addObject("userType", sessionRepository.findByJSessionId(sessionId).get(0).getType());
         return modelAndView;

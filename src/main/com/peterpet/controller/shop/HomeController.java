@@ -1,4 +1,4 @@
-package com.peterpet.controller;
+package com.peterpet.controller.shop;
 
 import com.peterpet.constant.UserType;
 import com.peterpet.domain.Session;
@@ -24,7 +24,7 @@ import static com.peterpet.util.LoggerUtil.*;
  */
 @Controller
 @RequestMapping("")
-public class MainPageController {
+public class HomeController {
     @Autowired
     private SessionRepository sessionRepository;
 
@@ -52,7 +52,7 @@ public class MainPageController {
 
         String sessionId = request.getSession().getId();
         String userId = sessionRepository.findByJSessionId(sessionId).get(0).getUserId();
-        ModelAndView modelAndView = new ModelAndView("user_main");
+        ModelAndView modelAndView = new ModelAndView("home/user_main");
         modelAndView.addObject("userId", userId);
         modelAndView.addObject("userType", sessionRepository.findByJSessionId(sessionId).get(0).getType());
         return modelAndView;

@@ -1726,7 +1726,7 @@
 
     // MOMENTS
 
-    // Setting the hour should keep the time, because the user explicitly
+    // Setting the hour should keep the time, because the shop explicitly
     // specified which hour he wants. So trying to maintain the same hour (in
     // a new timezone) makes sense. Adding/subtracting hours does not follow
     // this rule.
@@ -4233,51 +4233,51 @@
 
 
     var ko = moment__default.defineLocale('ko', {
-        months : '1¿ù_2¿ù_3¿ù_4¿ù_5¿ù_6¿ù_7¿ù_8¿ù_9¿ù_10¿ù_11¿ù_12¿ù'.split('_'),
-        monthsShort : '1¿ù_2¿ù_3¿ù_4¿ù_5¿ù_6¿ù_7¿ù_8¿ù_9¿ù_10¿ù_11¿ù_12¿ù'.split('_'),
-        weekdays : 'ÀÏ¿äÀÏ_¿ù¿äÀÏ_È­¿äÀÏ_¼ö¿äÀÏ_¸ñ¿äÀÏ_±Ý¿äÀÏ_Åä¿äÀÏ'.split('_'),
-        weekdaysShort : 'ÀÏ_¿ù_È­_¼ö_¸ñ_±Ý_Åä'.split('_'),
-        weekdaysMin : 'ÀÏ_¿ù_È­_¼ö_¸ñ_±Ý_Åä'.split('_'),
+        months : '1ï¿½ï¿½_2ï¿½ï¿½_3ï¿½ï¿½_4ï¿½ï¿½_5ï¿½ï¿½_6ï¿½ï¿½_7ï¿½ï¿½_8ï¿½ï¿½_9ï¿½ï¿½_10ï¿½ï¿½_11ï¿½ï¿½_12ï¿½ï¿½'.split('_'),
+        monthsShort : '1ï¿½ï¿½_2ï¿½ï¿½_3ï¿½ï¿½_4ï¿½ï¿½_5ï¿½ï¿½_6ï¿½ï¿½_7ï¿½ï¿½_8ï¿½ï¿½_9ï¿½ï¿½_10ï¿½ï¿½_11ï¿½ï¿½_12ï¿½ï¿½'.split('_'),
+        weekdays : 'ï¿½Ï¿ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½_È­ï¿½ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½ï¿½ï¿½_ï¿½Ý¿ï¿½ï¿½ï¿½_ï¿½ï¿½ï¿½ï¿½ï¿½'.split('_'),
+        weekdaysShort : 'ï¿½ï¿½_ï¿½ï¿½_È­_ï¿½ï¿½_ï¿½ï¿½_ï¿½ï¿½_ï¿½ï¿½'.split('_'),
+        weekdaysMin : 'ï¿½ï¿½_ï¿½ï¿½_È­_ï¿½ï¿½_ï¿½ï¿½_ï¿½ï¿½_ï¿½ï¿½'.split('_'),
         longDateFormat : {
-            LT : 'A h½Ã mºÐ',
-            LTS : 'A h½Ã mºÐ sÃÊ',
+            LT : 'A hï¿½ï¿½ mï¿½ï¿½',
+            LTS : 'A hï¿½ï¿½ mï¿½ï¿½ sï¿½ï¿½',
             L : 'YYYY.MM.DD',
-            LL : 'YYYY³â MMMM DÀÏ',
-            LLL : 'YYYY³â MMMM DÀÏ A h½Ã mºÐ',
-            LLLL : 'YYYY³â MMMM DÀÏ dddd A h½Ã mºÐ'
+            LL : 'YYYYï¿½ï¿½ MMMM Dï¿½ï¿½',
+            LLL : 'YYYYï¿½ï¿½ MMMM Dï¿½ï¿½ A hï¿½ï¿½ mï¿½ï¿½',
+            LLLL : 'YYYYï¿½ï¿½ MMMM Dï¿½ï¿½ dddd A hï¿½ï¿½ mï¿½ï¿½'
         },
         calendar : {
-            sameDay : '¿À´Ã LT',
-            nextDay : '³»ÀÏ LT',
+            sameDay : 'ï¿½ï¿½ï¿½ï¿½ LT',
+            nextDay : 'ï¿½ï¿½ï¿½ï¿½ LT',
             nextWeek : 'dddd LT',
-            lastDay : '¾îÁ¦ LT',
-            lastWeek : 'Áö³­ÁÖ dddd LT',
+            lastDay : 'ï¿½ï¿½ï¿½ï¿½ LT',
+            lastWeek : 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ dddd LT',
             sameElse : 'L'
         },
         relativeTime : {
-            future : '%s ÈÄ',
-            past : '%s Àü',
-            s : '¸î ÃÊ',
-            ss : '%dÃÊ',
-            m : 'ÀÏºÐ',
-            mm : '%dºÐ',
-            h : 'ÇÑ ½Ã°£',
-            hh : '%d½Ã°£',
-            d : 'ÇÏ·ç',
-            dd : '%dÀÏ',
-            M : 'ÇÑ ´Þ',
-            MM : '%d´Þ',
-            y : 'ÀÏ ³â',
-            yy : '%d³â'
+            future : '%s ï¿½ï¿½',
+            past : '%s ï¿½ï¿½',
+            s : 'ï¿½ï¿½ ï¿½ï¿½',
+            ss : '%dï¿½ï¿½',
+            m : 'ï¿½Ïºï¿½',
+            mm : '%dï¿½ï¿½',
+            h : 'ï¿½ï¿½ ï¿½Ã°ï¿½',
+            hh : '%dï¿½Ã°ï¿½',
+            d : 'ï¿½Ï·ï¿½',
+            dd : '%dï¿½ï¿½',
+            M : 'ï¿½ï¿½ ï¿½ï¿½',
+            MM : '%dï¿½ï¿½',
+            y : 'ï¿½ï¿½ ï¿½ï¿½',
+            yy : '%dï¿½ï¿½'
         },
-        ordinalParse : /\d{1,2}ÀÏ/,
-        ordinal : '%dÀÏ',
-        meridiemParse : /¿ÀÀü|¿ÀÈÄ/,
+        ordinalParse : /\d{1,2}ï¿½ï¿½/,
+        ordinal : '%dï¿½ï¿½',
+        meridiemParse : /ï¿½ï¿½ï¿½ï¿½|ï¿½ï¿½ï¿½ï¿½/,
         isPM : function (token) {
-            return token === '¿ÀÈÄ';
+            return token === 'ï¿½ï¿½ï¿½ï¿½';
         },
         meridiem : function (hour, minute, isUpper) {
-            return hour < 12 ? '¿ÀÀü' : '¿ÀÈÄ';
+            return hour < 12 ? 'ï¿½ï¿½ï¿½ï¿½' : 'ï¿½ï¿½ï¿½ï¿½';
         }
     });
 

@@ -14,7 +14,7 @@ import java.util.List;
  * private Date createDate;
  */
 
-public interface UserAccountRepository extends JpaRepository<UserAccount, Long> {
+public interface UserAccountRepository extends JpaRepository<UserAccount, String> {
 
     List<UserAccount> findByUsername(String username);
 

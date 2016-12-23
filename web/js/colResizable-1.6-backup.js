@@ -51,7 +51,7 @@
         t.opt = options;                //each table has its own options available at anytime
         t.mode = options.resizeMode;    //shortcuts
         t.dc = t.opt.disabledColumns;
-        if(t.opt.disable) return destroy(t);				//the user is asking to destroy a previously colResized table
+        if(t.opt.disable) return destroy(t);				//the shop is asking to destroy a previously colResized table
         var	id = t.id = t.attr(ID) || SIGNATURE+count++;	//its id is obtained, if null new one is generated
         t.p = t.opt.postbackSafe; 							//short-cut to detect postback safe
         if(!t.is("table") || tables[id] && !t.opt.partialRefresh) return; 		//if the object is not a table or if it was already processed then it is ignored.

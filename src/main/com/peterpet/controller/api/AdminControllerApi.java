@@ -32,16 +32,16 @@ public class AdminControllerApi {
 //            modelMap.addAttribute("json", gson.toJson(new ApiResult("Failure", "Empty parameter.")));
 //        } else if (userAccountRepository.findByAccount(account).size() == 0 &&
 //                userAccountRepository.findByNumber(number).size() == 0) {
-//            UserAccount user = new UserAccount(type, firstname, lastname, account, password, number, model, businessNumber, chatId);
+//            UserAccount shop = new UserAccount(type, firstname, lastname, account, password, number, model, businessNumber, chatId);
 //            if (type.equals("User")) {
-//                user.setActive(true); // 일반 사용자 일경우에는 바로 Active! 개인사업자인경우는 Active를 안하게 만들어야한다.
-//                userAddressRepository.save(new UserAddress(user.getUuid()));
-//                deliveryAddressRepository.save(new DeliveryAddress(user.getUuid()));
+//                shop.setActive(true); // 일반 사용자 일경우에는 바로 Active! 개인사업자인경우는 Active를 안하게 만들어야한다.
+//                userAddressRepository.save(new UserAddress(shop.getUuid()));
+//                deliveryAddressRepository.save(new DeliveryAddress(shop.getUuid()));
 //            } else {
-//                favoriteRegionRepository.save(new FavoriteRegion(user.getUuid()));
-//                businessInfoRepository.save(new BusinessInfo(user.getUuid()));
+//                favoriteRegionRepository.save(new FavoriteRegion(shop.getUuid()));
+//                businessInfoRepository.save(new BusinessInfo(shop.getUuid()));
 //            }
-//            userAccountRepository.save(user);
+//            userAccountRepository.save(shop);
 //            modelMap.addAttribute("json", gson.toJson(new ApiResult("Successful", "Create \'" + account + "\' account.")));
 //        } else if (userAccountRepository.findByNumber(number).size() != 0) {
 //            modelMap.addAttribute("json", gson.toJson(new ApiResult("Failure", "You have account.")));

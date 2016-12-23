@@ -2,13 +2,15 @@ package com.peterpet.domain;
 
 import com.peterpet.util.EncryptUtil;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.io.Serializable;
 import java.sql.Date;
 
 @Entity
-@Table(name = "user_account")
-public class UserAccount implements Serializable {
+@Table(name = "shop_account")
+public class ShopAccount implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -21,10 +23,10 @@ public class UserAccount implements Serializable {
     private Date createDate;
     private String type;
 
-    protected UserAccount() {
+    protected ShopAccount() {
     }
 
-    public UserAccount(String userId, String username, String password, String phone, String type) {
+    public ShopAccount(String userId, String username, String password, String phone, String type) {
         this.userId = userId;
         this.username = username;
         this.hash = EncryptUtil.getSHA256(EncryptUtil.FIRST_KEY + userId + password + EncryptUtil.SECOND_KEY);

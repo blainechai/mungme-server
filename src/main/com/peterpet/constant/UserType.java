@@ -5,7 +5,7 @@ package com.peterpet.constant;
  */
 public final class UserType {
     public final static String ADMIN = "admin";
-    public final static String USER = "user";
+    public final static String USER = "shop";
 
     public static boolean isUser(String type) {
         if (type.equals(ADMIN)) return true;

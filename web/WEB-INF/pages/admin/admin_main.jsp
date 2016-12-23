@@ -12,7 +12,7 @@
 <%--<br><br>--%>
 
 <%--<a href="/admin/admin-account">관리자 계정 관리</a>--%>
-<%--<a href="/admin/user">사용자 관리</a>--%>
+<%--<a href="/admin/shop">사용자 관리</a>--%>
 
 <%--</body>--%>
 <%--</html>--%>
@@ -71,7 +71,7 @@
                         <li><a href="/admin/admin-account" content="/admin/admin-account"><i
                                 class="glyphicon glyphicon-user"></i> Admin
                             List</a></li>
-                        <%--<li><a href="#" content="/admin/user" onclick="setIframe(this);return false;"><i--%>
+                        <%--<li><a href="#" content="/admin/shop" onclick="setIframe(this);return false;"><i--%>
                         <li><a href="/admin/user" content="/admin/user"><i
                                 class="glyphicon glyphicon-user"></i> User List</a>
                         </li>
@@ -97,7 +97,7 @@
             $(this).find("i").toggleClass("glyphicon-chevron-right glyphicon-chevron-down");
         });
 
-//        $('#user-menu a').click(function (e) {
+//        $('#shop-menu a').click(function (e) {
 //            $('#content-iframe').attr('src', $(this).attr('content'));
 //        });
 

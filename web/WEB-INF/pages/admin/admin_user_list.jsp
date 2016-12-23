@@ -35,7 +35,7 @@
             </button>
             <a class="navbar-brand" href="/admin/main">사용자 관리</a>
         </div>
-        <div class="navbar-collapse collapse">
+        <%--<div class="navbar-collapse collapse">--%>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="/"><i class="glyphicon glyphicon-home"></i> home</a></li>
                 <li class="dropdown">
@@ -43,7 +43,7 @@
                 </li>
                 <li><a href="/admin/logout"><i class="glyphicon glyphicon-lock"></i> Logout</a></li>
             </ul>
-        </div>
+        <%--</div>--%>
     </div>
     <!-- /container -->
 </div>
@@ -62,7 +62,7 @@
                         <li><a href="/admin/admin-account" content="/admin/admin-account"><i
                                 class="glyphicon glyphicon-user"></i> Admin
                             List</a></li>
-                        <%--<li><a href="#" content="/admin/user" onclick="setIframe(this);return false;"><i--%>
+                        <%--<li><a href="#" content="/admin/shop" onclick="setIframe(this);return false;"><i--%>
                         <li><a href="/admin/user" content="/admin/user"><i
                                 class="glyphicon glyphicon-user"></i> User List</a>
                         </li>
@@ -75,7 +75,7 @@
         </div>
         <div class="col-sm-9" style="height:100%;">
             <div class="">
-                <h2>Admin List</h2>
+                <h2>User List</h2>
                 <!-- Search Bar -->
                 <div class="panel panel-info">
                     <div class="panel-heading">Search</div>
@@ -84,8 +84,8 @@
                         <div class="input-group" style="width: 100%;">
                             <select name="searchFilter" class="form-control"
                                     style="width: 140px; border-top-right-radius: 0;border-bottom-right-radius: 0;">
-                                <option value="userId">관리자 계정</option>
-                                <option value="username">관리자 이름</option>
+                                <option value="userId">사용자 계정</option>
+                                <option value="username">사용자 이름</option>
                                 <%--<option value="password">비밀번호</option>--%>
                                 <%--<option value="date">생성일</option>--%>
                             </select>
@@ -94,7 +94,7 @@
                                    type="text">
                             <%--<div class="btn-group btn-group-justified" style="width: 140px;">--%>
                             <button class="btn btn-primary" style="width: 80px;"
-                                    onclick="searchAdminUsers();return false;">검색
+                                    onclick="searchUsers();return false;">검색
                             </button>
                             <%--<button class="btn btn-default" style="width: 80px;"--%>
                             <%--onclick="getAdminUsers();return false;">초기화--%>
@@ -106,20 +106,20 @@
                 </div>
 
                 <div class="table-responsive">
-                    <form action="/admin/admin-account/register" method="post" style="width: 100%; position:relative;">
-
-                    </form>
-                    <table class="table table-condensed table-hover list-table" id="admin-user-list-table">
+                    <%--<form action="/admin/admin-account/register" method="post" style="width: 100%; position:relative;">--%>
+                    <%----%>
+                    <%--</form>--%>
+                    <table class="table table-condensed table-hover list-table" id="user-list-table">
                         <thead>
                         <tr>
-                            <th width="20%" class="text-center">관리자 계정</th>
-                            <th width="20%" class="text-center">관리자 이름</th>
+                            <th width="20%" class="text-center">사용자 계정</th>
+                            <th width="20%" class="text-center">사용자 이름</th>
                             <th width="20%" class="text-center">비밀번호</th>
                             <th width="20%" class="text-center">생성일</th>
                             <th width="20%" class="text-center">그룹</th>
                             <th class="text-center shrink" style="text-align: left!important;">
                                 <button class="btn btn-primary btn-register"
-                                        style="width: 100%;" onclick="joinAdminUserClickHandler(this);return false;">생성
+                                        style="width: 100%;" onclick="joinUserClickHandler(this);return false;">생성
                                 </button>
                             </th>
                         </tr>
@@ -156,7 +156,7 @@
     <div style="position: relative;width: 300px;top: calc(50% - 300px);left: calc(50% - 150px);padding: 15px;margin: 0;text-align: left;"
          class="panel panel-default">
         <%--<form action="/admin/admin-account/update" method="post" class="form" role="form">--%>
-        <label>관리자 아이디</label>
+        <label>사용자 아이디</label>
         <input class="form-control" value="" placeholder="사용자 이름"
                name="userId" type="email" readOnly/><br>
         <label>이름</label>
@@ -211,19 +211,18 @@
 <script>
     var userList = [];
     $(document).ready(function () {
-        getAdminUsers();
+        getUsers();
 //        setModifyBtnClickListener();
     });
 
     function userDeleteCheck() {
-        if ($('#admin-user-list-table tbody tr').size() <= 1) {
-            alert('관리자 계정은 모두 삭제할 수 없습니다');
-            return false;
-        } else {
-            return confirm('정말로 삭제하시겠습니까?');
-        }
+//        if ($('#admin-shop-list-table tbody tr').size() <= 1) {
+//            alert('관리자 계정은 모두 삭제할 수 없습니다');
+//            return false;
+//        } else {
+        return confirm('정말로 삭제하시겠습니까?');
+//        }
     }
-
     function submitCheck(userId, username, password) {
         if (userId == '') {
             alert('아이디를 입력하세요.');
@@ -238,10 +237,10 @@
         return true;
     }
 
-    function getAdminUsers() {
+    function getUsers() {
         initSearchInput();
         $.ajax({
-            url: '/admin/admin-account/get',
+            url: '/admin/shop/get',
             type: 'post',
             data: {},
             contentType: "application/x-www-form-urlencoded; charset=UTF-8",
@@ -253,9 +252,9 @@
         });
     }
 
-    function searchAdminUsers() {
+    function searchUsers() {
         $.ajax({
-            url: '/admin/admin-account/get',
+            url: '/admin/shop/get',
             type: 'post',
             data: {
                 searchFilter: $('select[name=searchFilter]').val(),
@@ -271,22 +270,22 @@
     }
 
     function addListTd(data) {
-        var tbody = $('#admin-user-list-table tbody');
+        var tbody = $('#shop-list-table tbody');
         tbody.children().remove();
         $.each(data, function (i, d) {
             var trEl = $('<tr>' +
-                    '<td class="user-id-td"></td>' +
+                    '<td class="shop-id-td"></td>' +
                     '<td class="text-center username-td"></td>' +
                     '<td class="text-center password-td">********</td>' +
                     '<td class="text-center create-date-td"></td>' +
                     '<td class="text-center group-td"></td>' +
                     '<td class="text-center shrink">' +
-                    '<button class="btn btn-primary" style="margin-right: 5px;" name="userId" value="" onclick="modifyAdminUserClickHandler(this);return false;">수정</button>' +
-//                    '<form action="/admin/admin-account/delete" method="post" onsubmit="return userDeleteCheck();">' +
-                    '<button class="btn btn-danger" name="userId" value="" onclick="deleteClickListener(this);return false;">삭제</button>' +
+                    '<button class="btn btn-primary" style="margin-right: 5px;" name="userId" value="" onclick="modifyUserClickHandler(this);return false;">수정</button>' +
+//                    '<form action="/admin/shop/delete" method="post" onsubmit="return userDeleteCheck();">' +
+                    '<button class="btn btn-danger" name="userId" onclick="deleteClickListener(this);return false;" value="">삭제</button>' +
 //                    '</form>' +
                     '</td></tr>');
-            trEl.find('.user-id-td').text(d.userId);
+            trEl.find('.shop-id-td').text(d.userId);
             trEl.find('.username-td').text(d.username);
             trEl.find('.create-date-td').text(d.createDate);
             trEl.find('button[name=userId]').val(d.userId);
@@ -303,7 +302,7 @@
         if (userDeleteCheck()) {
             var el = $(element);
             $.ajax({
-                url: '/admin/admin-account/delete',
+                url: '/admin/shop/delete',
                 type: 'post',
                 data: {
                     userId: el.val()
@@ -313,9 +312,7 @@
                     if (responseData == 'true') {
 //                        tarTr.find('.group-name-td').text(groupName);
                         alert('삭제 되었습니다.');
-                        getAdminUsers()
-                    } else if (responseData == 'self') {
-                        alert('자기 자신은 삭제할 수 없습니다.');
+                        getUsers()
                     } else {
                         alert('삭제에 실패하였습니다. 다시 시도해 주세요.');
                     }
@@ -324,12 +321,12 @@
         }
     }
 
-    function modifyAdminUserClickHandler(element) {
+    function modifyUserClickHandler(element) {
         var el = $(element);
         var tarTr = el.parent().parent();
         var index = tarTr.index();
         var modifyDialogueContainer = $('.modify-dialogue-container');
-        modifyDialogueContainer.find('input[name=userId]').val(tarTr.find('.user-id-td').text());
+        modifyDialogueContainer.find('input[name=userId]').val(tarTr.find('.shop-id-td').text());
         modifyDialogueContainer.find('input[name=username]').val(tarTr.find('.username-td').text());
         modifyDialogueContainer.find('input[name=password]').val('********');
         modifyDialogueContainer.find('input[name=createDate]').val(tarTr.find('.create-date-td').text());
@@ -344,7 +341,7 @@
         groupCheckbox.children().remove();
         console.error("hihi");
         $.ajax({
-            url: '/admin/user-group/get',
+            url: '/admin/shop-group/get',
             type: 'post',
             data: {
                 userId: userId
@@ -387,7 +384,7 @@
                         var uncheckedJson = JSON.stringify(b);
                         if (submitCheck(userId, username, password)) {
                             $.ajax({
-                                url: '/admin/admin-account/update',
+                                url: '/admin/shop/update',
                                 type: 'post',
                                 data: {
                                     userId: userId,
@@ -399,11 +396,11 @@
                                 contentType: "application/x-www-form-urlencoded; charset=UTF-8",
                                 success: function (responseData) {
                                     if (responseData == 'true') {
-                                        tarTr.find('.user-id-td').text(userId);
+                                        tarTr.find('.shop-id-td').text(userId);
                                         tarTr.find('.username-td').text(username);
                                         alert('저장 되었습니다.');
                                         $('.modify-dialogue-container').hide();
-                                        getAdminUsers();
+                                        getUsers();
                                     } else {
                                         alert('수정에 실패하였습니다. 다시 시도해 주세요.');
                                     }
@@ -420,7 +417,7 @@
 
     }
 
-    function joinAdminUserClickHandler(element) {
+    function joinUserClickHandler(element) {
         var el = $(element);
         var tarTr = el.parent().parent();
         var joinDialogueContainer = $('.join-dialogue-container');
@@ -436,7 +433,7 @@
         var groupCheckbox = joinDialogueContainer.find('.checkbox');
         groupCheckbox.children().remove();
         $.ajax({
-            url: '/admin/user-group/get',
+            url: '/admin/shop-group/get',
             type: 'post',
             data: {},
             contentType: "application/x-www-form-urlencoded; charset=UTF-8",
@@ -476,7 +473,7 @@
                         var checkedJson = JSON.stringify(a);
                         var uncheckedJson = JSON.stringify(b);
                         $.ajax({
-                            url: '/admin/admin-account/join',
+                            url: '/admin/shop/join',
                             type: 'post',
                             data: {
                                 userId: userId,
@@ -488,7 +485,7 @@
                             contentType: "application/x-www-form-urlencoded; charset=UTF-8",
                             success: function (responseData) {
                                 if (responseData == 'true') {
-                                    getAdminUsers();
+                                    getUsers();
                                     alert('저장 되었습니다.');
                                     $('.join-dialogue-container').hide();
                                 } else {
