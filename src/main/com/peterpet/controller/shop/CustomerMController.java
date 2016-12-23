@@ -14,8 +14,8 @@ import javax.servlet.http.HttpServletRequest;
  */
 
 @Controller
-@RequestMapping("main/user")
-public class UserMController {
+@RequestMapping("main/customer")
+public class CustomerMController {
     @Autowired
     private SessionRepository sessionRepository;
 
@@ -26,7 +26,7 @@ public class UserMController {
     public ModelAndView mainPage(HttpServletRequest request) {
         String sessionId = request.getSession().getId();
         String userId = sessionRepository.findByJSessionId(sessionId).get(0).getUserId();
-        ModelAndView modelAndView = new ModelAndView("home/user_main");
+        ModelAndView modelAndView = new ModelAndView("customer/customer_main");
         modelAndView.addObject("userId", userId);
         modelAndView.addObject("userType", sessionRepository.findByJSessionId(sessionId).get(0).getType());
         return modelAndView;
@@ -36,7 +36,7 @@ public class UserMController {
     public ModelAndView commonPage(HttpServletRequest request) {
         String sessionId = request.getSession().getId();
         String userId = sessionRepository.findByJSessionId(sessionId).get(0).getUserId();
-        ModelAndView modelAndView = new ModelAndView("home/user_main");
+        ModelAndView modelAndView = new ModelAndView("customer/customer_main");
         modelAndView.addObject("userId", userId);
         modelAndView.addObject("userType", sessionRepository.findByJSessionId(sessionId).get(0).getType());
         return modelAndView;
@@ -47,7 +47,7 @@ public class UserMController {
 
         String sessionId = request.getSession().getId();
         String userId = sessionRepository.findByJSessionId(sessionId).get(0).getUserId();
-        ModelAndView modelAndView = new ModelAndView("home/user_main");
+        ModelAndView modelAndView = new ModelAndView("customer/customer_main");
         modelAndView.addObject("userId", userId);
         modelAndView.addObject("userType", sessionRepository.findByJSessionId(sessionId).get(0).getType());
         return modelAndView;

@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
  * Created by blainechai on 2016. 12. 23..
  */
 @Controller
-@RequestMapping("main/reservation")
+@RequestMapping("main/sale")
 public class SaleMController {
 
     @Autowired
@@ -27,7 +27,7 @@ public class SaleMController {
 
         String sessionId = request.getSession().getId();
         String userId = sessionRepository.findByJSessionId(sessionId).get(0).getUserId();
-        ModelAndView modelAndView = new ModelAndView("home/user_main");
+        ModelAndView modelAndView = new ModelAndView("sale/sale_main");
         modelAndView.addObject("userId", userId);
         modelAndView.addObject("userType", sessionRepository.findByJSessionId(sessionId).get(0).getType());
         return modelAndView;
@@ -38,7 +38,7 @@ public class SaleMController {
 
         String sessionId = request.getSession().getId();
         String userId = sessionRepository.findByJSessionId(sessionId).get(0).getUserId();
-        ModelAndView modelAndView = new ModelAndView("home/user_main");
+        ModelAndView modelAndView = new ModelAndView("sale/sale_main");
         modelAndView.addObject("userId", userId);
         modelAndView.addObject("userType", sessionRepository.findByJSessionId(sessionId).get(0).getType());
         return modelAndView;
