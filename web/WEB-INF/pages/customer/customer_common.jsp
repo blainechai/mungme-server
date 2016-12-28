@@ -37,13 +37,7 @@
                      style="height: 62px;object-fit: contain;position: absolute;right: -3px;top: -2px;">
             </div>
             <div id="left-nav" style="">
-                <div class="left-nav-menu" style="">기본정보 관리<span
-                        class="glyphicon glyphicon-chevron-right left-nav-menu-arrow"></span></div>
-                <div class="left-nav-menu" style="">자원 관리<span
-                        class="glyphicon glyphicon-chevron-right left-nav-menu-arrow"></span></div>
-                <div class="left-nav-menu" style="">예약문자 설정<span
-                        class="glyphicon glyphicon-chevron-right left-nav-menu-arrow"></span></div>
-                <div class="left-nav-menu" style="">휴무 관리<span
+                <div class="left-nav-menu" style="">고객 관리<span
                         class="glyphicon glyphicon-chevron-right left-nav-menu-arrow"></span></div>
             </div>
         </div>

@@ -17,57 +17,8 @@
     <script type="application/javascript" src="/js/bootstrap.js"></script>
 </head>
 <body>
-<!-- Split button -->
-<div id="header" class="header" style="height: 212px;position: relative;">
-    <div class="header-info-container">
-        <div class="header-info"><span class="header-info-logo" style="margin-top: 27px;">MUNGME</span><span
-                class="header-info-logout" style="position: absolute;right: 30px;font-size: 15px;"><a href="/logout"
-                                                                                                      style="">로그아웃</a></span>
-            <div class="header-info-login-info" style=""><span>대표운영자</span><span>(nenix)</span><span
-                    style="padding-left: 56px;">MUNGME 회원정보</span></div>
-        </div>
-    </div>
-    <div class="header-menu-container">
-        <div class="header-menu">
-            <%--<div class="header-btn" style="text-align: center"><div style="width: 86px;height: 86px;background: url('/imgs/header-store-btn-active.png')"></div><div class="header-btn-title" style="width: 100%; text-align: center;">매장관리</div></div><div class="header-menu-separator"></div>--%>
-            <div class="header-menu-separator"></div>
-            <div class="header-btn" style="width: calc(14.285714285714285% - 2px);"><img
-                    src="/imgs/header-reserve-btn.png"
-                    style="width: 46px;">
-                <div class="header-btn-title" style="width: 100%; text-align: center;">예약관리</div>
-            </div>
-            <div class="header-menu-separator"></div>
-            <div class="header-btn" style="text-align: center;"><img src="/imgs/header-store-btn-active.png" style="">
-                <div class="header-btn-title" style="width: 100%; text-align: center;">매장관리</div>
-            </div>
-            <div class="header-menu-separator"></div>
-            <div class="header-btn" style="text-align: center;"><img src="/imgs/header-client-btn.png"
-                                                                     style="width: 50px;">
-                <div class="header-btn-title" style="width: 100%; text-align: center;">고객관리</div>
-            </div>
-            <div class="header-menu-separator"></div>
-            <div class="header-btn" style="text-align: center;"><img src="/imgs/header-sales-btn.png"
-                                                                     style="width: 38px;">
-                <div class="header-btn-title" style="width: 100%; text-align: center;">입출금관리</div>
-            </div>
-            <div class="header-menu-separator"></div>
-            <div class="header-btn" style="text-align: center;"><img src="/imgs/header-cs-btn.png" style="width: 40px;">
-                <div class="header-btn-title" style="width: 100%; text-align: center;">고객센터</div>
-            </div>
-            <div class="header-menu-separator"></div>
-            <div class="header-btn" style="text-align: center;"><img src="/imgs/header-statistics.png"
-                                                                     style="width: 65px;margin-top: 6px;margin-left: 7px;">
-                <div class="header-btn-title" style="width: 100%; text-align: center;">분석</div>
-            </div>
-            <div class="header-menu-separator"></div>
-            <div class="header-btn" style="text-align: center;"><img src="/imgs/header-setting-btn.png"
-                                                                     style="width: 45px;">
-                <div class="header-btn-title" style="width: 100%; text-align: center;">설정</div>
-            </div>
-            <div class="header-menu-separator"></div>
-        </div>
-    </div>
-</div>
+<jsp:include page="../header.jsp" flush="false"/>
+
 <div class="container">
     <div class="row">
         <div id="left-menu-menu-container" class="left-menu-container col-xs-3">
@@ -245,7 +196,8 @@
                 사업자등록번호 : 309-88-00093 | Fax : 0505-507-3720｜e-mail : jungcosmetic@jungco.co.kr
                 주소 : 충청남도 아산시 신창면 순천향로 22, 5층 B501호 순천향대학교 내 산학협력관
                 통신판매업신고번호 : 제 2015-충남아산-0179호 | 개인정보관리자 : 배세철
-                Copyright (C) 2015 JUNG COSMETICS. All rights Reserved. Created by Neversunset Technology.</div>
+                Copyright (C) 2015 JUNG COSMETICS. All rights Reserved. Created by Neversunset Technology.
+            </div>
         </div>
     </div>
 </div>

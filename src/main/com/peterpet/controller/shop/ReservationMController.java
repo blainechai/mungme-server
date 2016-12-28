@@ -1,7 +1,11 @@
 package com.peterpet.controller.shop;
 
+import com.peterpet.domain.UserAccount;
+import com.peterpet.exception.SessionNotFoundException;
+import com.peterpet.exception.UserIdNotFoundException;
 import com.peterpet.repository.SessionRepository;
 import com.peterpet.repository.UserAccountRepository;
+import com.peterpet.util.LoginUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,25 +26,81 @@ public class ReservationMController {
     @Autowired
     private UserAccountRepository userAccountRepository;
 
+
+
     @RequestMapping(value = {""})
     public ModelAndView mainPage(HttpServletRequest request) {
-
-        String sessionId = request.getSession().getId();
-        String userId = sessionRepository.findByJSessionId(sessionId).get(0).getUserId();
-        ModelAndView modelAndView = new ModelAndView("reservation/reservation_main");
-        modelAndView.addObject("userId", userId);
-        modelAndView.addObject("userType", sessionRepository.findByJSessionId(sessionId).get(0).getType());
-        return modelAndView;
+        try {
+            LoginUtil loginUtil = new LoginUtil(userAccountRepository, sessionRepository);
+            UserAccount userAccount = loginUtil.getUserAccount(request);
+        /*String sessionId = request.getSession().getId();
+        String userId = sessionRepository.findByJSessionId(sessionId).get(0).getUserId();*/
+            ModelAndView modelAndView = new ModelAndView("reservation/reservation_main");
+            modelAndView.addObject("userId", userAccount.getUserId());
+            modelAndView.addObject("userType", userAccount.getType());
+            return modelAndView;
+        } catch (SessionNotFoundException e) {
+            e.printStackTrace();
+        } catch (UserIdNotFoundException e) {
+            e.printStackTrace();
+        }
+        return new ModelAndView("error");
     }
 
-    @RequestMapping(value = {"common"})
-    public ModelAndView commonPage(HttpServletRequest request) {
+    @RequestMapping(value = {"book"})
+    public ModelAndView bookPage(HttpServletRequest request) {
+        try {
+            LoginUtil loginUtil = new LoginUtil(userAccountRepository, sessionRepository);
+            UserAccount userAccount = loginUtil.getUserAccount(request);
+        /*String sessionId = request.getSession().getId();
+        String userId = sessionRepository.findByJSessionId(sessionId).get(0).getUserId();*/
+            ModelAndView modelAndView = new ModelAndView("reservation/reservation_main");
+            modelAndView.addObject("userId", userAccount.getUserId());
+            modelAndView.addObject("userType", userAccount.getType());
+            return modelAndView;
+        } catch (SessionNotFoundException e) {
+            e.printStackTrace();
+        } catch (UserIdNotFoundException e) {
+            e.printStackTrace();
+        }
+        return new ModelAndView("error");
+    }
 
-        String sessionId = request.getSession().getId();
-        String userId = sessionRepository.findByJSessionId(sessionId).get(0).getUserId();
-        ModelAndView modelAndView = new ModelAndView("reservation/reservation_main");
-        modelAndView.addObject("userId", userId);
-        modelAndView.addObject("userType", sessionRepository.findByJSessionId(sessionId).get(0).getType());
-        return modelAndView;
+    @RequestMapping(value = {"book-list"})
+    public ModelAndView bookListPage(HttpServletRequest request) {
+        try {
+            LoginUtil loginUtil = new LoginUtil(userAccountRepository, sessionRepository);
+            UserAccount userAccount = loginUtil.getUserAccount(request);
+        /*String sessionId = request.getSession().getId();
+        String userId = sessionRepository.findByJSessionId(sessionId).get(0).getUserId();*/
+            ModelAndView modelAndView = new ModelAndView("reservation/reservation_main");
+            modelAndView.addObject("userId", userAccount.getUserId());
+            modelAndView.addObject("userType", userAccount.getType());
+            return modelAndView;
+        } catch (SessionNotFoundException e) {
+            e.printStackTrace();
+        } catch (UserIdNotFoundException e) {
+            e.printStackTrace();
+        }
+        return new ModelAndView("error");
+    }
+
+    @RequestMapping(value = {"config"})
+    public ModelAndView configPage(HttpServletRequest request) {
+        try {
+            LoginUtil loginUtil = new LoginUtil(userAccountRepository, sessionRepository);
+            UserAccount userAccount = loginUtil.getUserAccount(request);
+        /*String sessionId = request.getSession().getId();
+        String userId = sessionRepository.findByJSessionId(sessionId).get(0).getUserId();*/
+            ModelAndView modelAndView = new ModelAndView("reservation/reservation_main");
+            modelAndView.addObject("userId", userAccount.getUserId());
+            modelAndView.addObject("userType", userAccount.getType());
+            return modelAndView;
+        } catch (SessionNotFoundException e) {
+            e.printStackTrace();
+        } catch (UserIdNotFoundException e) {
+            e.printStackTrace();
+        }
+        return new ModelAndView("error");
     }
 }

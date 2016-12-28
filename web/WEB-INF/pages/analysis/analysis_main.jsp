@@ -18,8 +18,7 @@
 </head>
 <body>
 
-<%--import header--%>
-<jsp:include page="analysis_header.jsp" flush="false"/>
+<jsp:include page="../header.jsp" flush="false"/>
 
 <div class="container">
     <div class="row">

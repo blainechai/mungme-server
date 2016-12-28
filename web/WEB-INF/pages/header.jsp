@@ -12,40 +12,46 @@
         <div class="header-menu">
             <%--<div class="header-btn" style="text-align: center"><div style="width: 86px;height: 86px;background: url('/imgs/header-store-btn-active.png')"></div><div class="header-btn-title" style="width: 100%; text-align: center;">매장관리</div></div><div class="header-menu-separator"></div>--%>
             <div class="header-menu-separator"></div>
-            <div class="header-btn" style="width: calc(14.285714285714285% - 2px);"><img
-                    src="/imgs/header-reserve-btn.png"
+            <div class="header-btn reservation-header-btn" style="width: calc(14.285714285714285% - 2px);"><img
+                    src="/imgs/header-reservation-btn.png"
                     style="width: 46px;">
                 <div class="header-btn-title" style="width: 100%; text-align: center;">예약관리</div>
             </div>
             <div class="header-menu-separator"></div>
-            <div class="header-btn" style="text-align: center;"><img src="/imgs/header-store-btn-active.png" style="">
+            <div class="header-btn shop-header-btn" style="text-align: center;"><img
+                    src="/imgs/header-shop-btn-active.png" style="">
                 <div class="header-btn-title" style="width: 100%; text-align: center;">매장관리</div>
             </div>
             <div class="header-menu-separator"></div>
-            <div class="header-btn" style="text-align: center;"><img src="/imgs/header-client-btn.png"
-                                                                     style="width: 50px;">
+            <div class="header-btn customer-header-btn" style="text-align: center;"><img
+                    src="/imgs/header-customer-btn.png"
+                    style="width: 50px;">
                 <div class="header-btn-title" style="width: 100%; text-align: center;">고객관리</div>
             </div>
             <div class="header-menu-separator"></div>
-            <div class="header-btn" style="text-align: center;"><img src="/imgs/header-sales-btn.png"
-                                                                     style="width: 38px;">
+            <div class="header-btn sale-header-btn" style="text-align: center;"><img src="/imgs/header-sale-btn.png"
+                                                                                     style="width: 38px;">
                 <div class="header-btn-title" style="width: 100%; text-align: center;">입출금관리</div>
             </div>
             <div class="header-menu-separator"></div>
-            <div class="header-btn" style="text-align: center;"><img src="/imgs/header-cs-btn.png" style="width: 40px;">
+            <div class="header-btn cs-header-btn" style="text-align: center;"><img src="/imgs/header-cs-btn.png"
+                                                                                   style="width: 40px;">
                 <div class="header-btn-title" style="width: 100%; text-align: center;">고객센터</div>
             </div>
             <div class="header-menu-separator"></div>
-            <div class="header-btn" style="text-align: center;"><img src="/imgs/header-statistics.png"
-                                                                     style="width: 65px;margin-top: 6px;margin-left: 7px;">
+            <div class="header-btn analysis-header-btn" style="text-align: center;"><img
+                    src="/imgs/header-analysis-btn.png"
+                    style="width: 65px;margin-top: 6px;margin-left: 7px;">
                 <div class="header-btn-title" style="width: 100%; text-align: center;">분석</div>
             </div>
             <div class="header-menu-separator"></div>
-            <div class="header-btn" style="text-align: center;"><img src="/imgs/header-setting-btn.png"
-                                                                     style="width: 45px;">
+            <div class="header-btn config-header-btn" style="text-align: center;"><img
+                    src="/imgs/header-config-btn.png"
+                    style="width: 45px;">
                 <div class="header-btn-title" style="width: 100%; text-align: center;">설정</div>
             </div>
             <div class="header-menu-separator"></div>
         </div>
     </div>
 </div>
+<script src="/js/header.js"></script>
