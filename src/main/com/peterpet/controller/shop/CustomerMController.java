@@ -32,7 +32,7 @@ public class CustomerMController {
             UserAccount userAccount = new LoginUtil(userAccountRepository, sessionRepository).getUserAccount(request);
 //            String sessionId = request.getSession().getId();
             String userId = userAccount.getUserId();
-            ModelAndView modelAndView = new ModelAndView("customer/customer_main");
+            ModelAndView modelAndView = new ModelAndView("customer/customer-manage");
             modelAndView.addObject("userId", userId);
             modelAndView.addObject("userType", userAccount.getType());
             return modelAndView;
@@ -44,13 +44,13 @@ public class CustomerMController {
         return new ModelAndView("error");
     }
 
-    @RequestMapping(value = {"common"})
+    @RequestMapping(value = {"manage"})
     public ModelAndView commonPage(HttpServletRequest request) {
         try {
             UserAccount userAccount = new LoginUtil(userAccountRepository, sessionRepository).getUserAccount(request);
 //            String sessionId = request.getSession().getId();
             String userId = userAccount.getUserId();
-            ModelAndView modelAndView = new ModelAndView("customer/customer_main");
+            ModelAndView modelAndView = new ModelAndView("customer/customer-manage");
             modelAndView.addObject("userId", userId);
             modelAndView.addObject("userType", userAccount.getType());
             return modelAndView;

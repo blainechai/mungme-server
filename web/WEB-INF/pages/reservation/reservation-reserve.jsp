@@ -17,37 +17,11 @@
     <script type="application/javascript" src="/js/bootstrap.js"></script>
 </head>
 <body>
-
 <jsp:include page="../header.jsp" flush="false"/>
 
 <div class="container">
     <div class="row">
-        <div id="left-menu-menu-container" class="left-menu-container col-xs-3">
-            <div class="shop-name-container">
-                <div class="shop-name">
-                    순이네 펫 미용실
-                </div>
-                <div style="margin-top: 9px;width: 155px;height: 16px;font-family: 'Nanum Gothic';font-size: 14px;font-weight: normal;font-style: normal;font-stretch: normal;letter-spacing: -0.2px;color: rgba(189, 189, 189, 0.87);">
-                    이용자 정보를 검색하세요.
-                </div>
-            </div>
-            <div class="search-input-container">
-                <input id="search-input" type="text" class="search-input"
-                       style="width: 165px;height: 53.3px;object-fit: contain;background-color: #fbfbfb;box-shadow: 0 2px 4px 0 rgba(172, 172, 172, 0.5);border: 0;">
-                <img src="/imgs/search-icon.png" alt="search"
-                     style="height: 62px;object-fit: contain;position: absolute;right: -3px;top: -2px;">
-            </div>
-            <div id="left-nav" style="">
-                <div class="left-nav-menu" style="">기본정보 관리<span
-                        class="glyphicon glyphicon-chevron-right left-nav-menu-arrow"></span></div>
-                <div class="left-nav-menu" style="">자원 관리<span
-                        class="glyphicon glyphicon-chevron-right left-nav-menu-arrow"></span></div>
-                <div class="left-nav-menu" style="">예약문자 설정<span
-                        class="glyphicon glyphicon-chevron-right left-nav-menu-arrow"></span></div>
-                <div class="left-nav-menu" style="">휴무 관리<span
-                        class="glyphicon glyphicon-chevron-right left-nav-menu-arrow"></span></div>
-            </div>
-        </div>
+        <jsp:include page="reservation-left-menu.jsp" flush="false"/>
         <div id="right-content-container" class="right-content-container col-xs-12">
             <div class="category-nav">
                 <span class="category-name">홈<span
@@ -187,8 +161,6 @@
         </div>
     </div>
 </div>
-<%--import footer--%>
 <jsp:include page="../footer.jsp" flush="false"/>
-
 </body>
 </html>

@@ -32,7 +32,7 @@ public class ShopMController {
             UserAccount userAccount = new LoginUtil(userAccountRepository, sessionRepository).getUserAccount(request);
 //            String sessionId = request.getSession().getId();
             String userId = userAccount.getUserId();
-            ModelAndView modelAndView = new ModelAndView("shop/shop_main");
+            ModelAndView modelAndView = new ModelAndView("shop/shop-info");
             modelAndView.addObject("userId", userId);
             modelAndView.addObject("userType", userAccount.getType());
             return modelAndView;
@@ -44,13 +44,13 @@ public class ShopMController {
         return new ModelAndView("error");
     }
 
-    @RequestMapping(value = {"common"})
+    @RequestMapping(value = {"info"})
     public ModelAndView commonPage(HttpServletRequest request) {
         try {
             UserAccount userAccount = new LoginUtil(userAccountRepository, sessionRepository).getUserAccount(request);
 //            String sessionId = request.getSession().getId();
             String userId = userAccount.getUserId();
-            ModelAndView modelAndView = new ModelAndView("shop/shop_main");
+            ModelAndView modelAndView = new ModelAndView("shop/shop-info");
             modelAndView.addObject("userId", userId);
             modelAndView.addObject("userType", userAccount.getType());
             return modelAndView;
@@ -68,7 +68,7 @@ public class ShopMController {
             UserAccount userAccount = new LoginUtil(userAccountRepository, sessionRepository).getUserAccount(request);
 //            String sessionId = request.getSession().getId();
             String userId = userAccount.getUserId();
-            ModelAndView modelAndView = new ModelAndView("shop/shop_main");
+            ModelAndView modelAndView = new ModelAndView("shop/shop-resource");
             modelAndView.addObject("userId", userId);
             modelAndView.addObject("userType", userAccount.getType());
             return modelAndView;
@@ -86,7 +86,7 @@ public class ShopMController {
             UserAccount userAccount = new LoginUtil(userAccountRepository, sessionRepository).getUserAccount(request);
 //            String sessionId = request.getSession().getId();
             String userId = userAccount.getUserId();
-            ModelAndView modelAndView = new ModelAndView("shop/shop_main");
+            ModelAndView modelAndView = new ModelAndView("shop/shop-sms");
             modelAndView.addObject("userId", userId);
             modelAndView.addObject("userType", userAccount.getType());
             return modelAndView;
@@ -104,7 +104,7 @@ public class ShopMController {
             UserAccount userAccount = new LoginUtil(userAccountRepository, sessionRepository).getUserAccount(request);
 //            String sessionId = request.getSession().getId();
             String userId = userAccount.getUserId();
-            ModelAndView modelAndView = new ModelAndView("shop/shop_main");
+            ModelAndView modelAndView = new ModelAndView("shop/shop-day-off");
             modelAndView.addObject("userId", userId);
             modelAndView.addObject("userType", userAccount.getType());
             return modelAndView;

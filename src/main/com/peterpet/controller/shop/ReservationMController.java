@@ -35,7 +35,7 @@ public class ReservationMController {
             UserAccount userAccount = loginUtil.getUserAccount(request);
         /*String sessionId = request.getSession().getId();
         String userId = sessionRepository.findByJSessionId(sessionId).get(0).getUserId();*/
-            ModelAndView modelAndView = new ModelAndView("reservation/reservation_main");
+            ModelAndView modelAndView = new ModelAndView("reservation/reservation-reserve");
             modelAndView.addObject("userId", userAccount.getUserId());
             modelAndView.addObject("userType", userAccount.getType());
             return modelAndView;
@@ -47,14 +47,14 @@ public class ReservationMController {
         return new ModelAndView("error");
     }
 
-    @RequestMapping(value = {"book"})
+    @RequestMapping(value = {"reserve"})
     public ModelAndView bookPage(HttpServletRequest request) {
         try {
             LoginUtil loginUtil = new LoginUtil(userAccountRepository, sessionRepository);
             UserAccount userAccount = loginUtil.getUserAccount(request);
         /*String sessionId = request.getSession().getId();
         String userId = sessionRepository.findByJSessionId(sessionId).get(0).getUserId();*/
-            ModelAndView modelAndView = new ModelAndView("reservation/reservation_main");
+            ModelAndView modelAndView = new ModelAndView("reservation/reservation-reserve");
             modelAndView.addObject("userId", userAccount.getUserId());
             modelAndView.addObject("userType", userAccount.getType());
             return modelAndView;
@@ -66,14 +66,14 @@ public class ReservationMController {
         return new ModelAndView("error");
     }
 
-    @RequestMapping(value = {"book-list"})
+    @RequestMapping(value = {"list"})
     public ModelAndView bookListPage(HttpServletRequest request) {
         try {
             LoginUtil loginUtil = new LoginUtil(userAccountRepository, sessionRepository);
             UserAccount userAccount = loginUtil.getUserAccount(request);
         /*String sessionId = request.getSession().getId();
         String userId = sessionRepository.findByJSessionId(sessionId).get(0).getUserId();*/
-            ModelAndView modelAndView = new ModelAndView("reservation/reservation_main");
+            ModelAndView modelAndView = new ModelAndView("reservation/reservation-list");
             modelAndView.addObject("userId", userAccount.getUserId());
             modelAndView.addObject("userType", userAccount.getType());
             return modelAndView;
@@ -92,7 +92,7 @@ public class ReservationMController {
             UserAccount userAccount = loginUtil.getUserAccount(request);
         /*String sessionId = request.getSession().getId();
         String userId = sessionRepository.findByJSessionId(sessionId).get(0).getUserId();*/
-            ModelAndView modelAndView = new ModelAndView("reservation/reservation_main");
+            ModelAndView modelAndView = new ModelAndView("reservation/reservation-config");
             modelAndView.addObject("userId", userAccount.getUserId());
             modelAndView.addObject("userType", userAccount.getType());
             return modelAndView;

@@ -86,6 +86,7 @@ body {
 }
 
 .sub-menu-container {
+    width: 100%;
     display: inline-block;
     margin-bottom: 20px;
 }
@@ -193,7 +194,6 @@ body {
     /*display: inline-block;*/
     margin: 30px 0 63px 0;
     text-align: center;
-
 }
 
 .save-btn {
@@ -260,4 +260,141 @@ body {
     color: rgba(149, 149, 149, 0.87);
     width: 661px;
     margin: 0 auto;
+}
+
+.customer-btn {
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 10px 13px 10px 13px;
+    font-family: Nanum Gothic;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: -0.3px;
+    color: rgba(132, 132, 132, 0.87);
+    object-fit: contain;
+    background-color: #f6f6f6;
+    box-shadow: 1px 1px 1px 0 rgba(137, 137, 137, 0.5);
+    border: solid 1px #c6c6c6;
+}
+
+.customer-delete-btn {
+    margin-left: 0;
+}
+
+.custom-caret-down {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 10px;
+    vertical-align: middle;
+    border-top: 6px dashed;
+    border-top: 6px solid \9;
+    border-right: 6px solid transparent;
+    border-left: 6px solid transparent;
+}
+
+.custom-caret-up {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    content: "";
+    border-top: 0;
+    border-bottom: 4px solid;
+}
+
+.customer-register-btn-container {
+    text-align: center;
+
+}
+
+.customer-register-module-container {
+    margin-top: 61px;
+    width: 100%;
+    margin-bottom: 42px;
+}
+
+.customer-register-btn {
+    width: 157px;
+    height: 52px;
+    object-fit: contain;
+    border-radius: 5px;
+    background-color: #ed5565;
+    box-shadow: 1px 1px 1px 0 rgba(104, 104, 104, 0.5);
+    border: solid 1px #bfbfbf;
+    font-family: Nanum Gothic;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: -0.2px;
+    color: #ffffff;
+}
+
+.pager-module-container {
+    width: 100%;
+    display: flex;
+}
+
+.pager-module {
+    margin: 0 auto;
+}
+
+.pager-btn {
+    width: 44px;
+    height: 43px;
+    object-fit: contain;
+    background-color: #e0e0e0;
+    border: solid 1px #f0f2f5;
+    font-family: Nanum Gothic;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: -0.3px;
+    color: rgba(255, 255, 255, 0.87);
+    vertical-align: middle;
+    float: left;
+    line-height: 43px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.pager-btn:active, .pager-btn:hover, .pager-btn.active {
+    background-color: #acacac;
+}
+
+.page-prev-btn {
+    margin-right: 5px;
+}
+
+.page-next-btn {
+    margin-left: 5px;
+}
+
+.pager-btn > span {
+    line-height: 43px;
+}
+
+.customer-list-table > thead tr {
+    background-color: #f9f9f9;
+    box-shadow: 1px 1px 2px 0 rgba(175, 175, 175, 0.5);
+    border: solid 1px #dbdbdb;
+
+}
+
+.customer-list-table th {
+    border-top: solid 1px #ededed;
+    border-left: solid 1px #ededed;
+}
+
+.customer-list-table th, td {
+    text-align: center;
+    /*border-bottom: 1px solid #dbdbdb;*/
+    /*border-right: 1px solid #dbdbdb;*/
 }

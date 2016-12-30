@@ -27,7 +27,7 @@ public class CsMController {
 
         String sessionId = request.getSession().getId();
         String userId = sessionRepository.findByJSessionId(sessionId).get(0).getUserId();
-        ModelAndView modelAndView = new ModelAndView("cs/cs_main");
+        ModelAndView modelAndView = new ModelAndView("cs/cs-main");
         modelAndView.addObject("userId", userId);
         modelAndView.addObject("userType", sessionRepository.findByJSessionId(sessionId).get(0).getType());
         return modelAndView;
@@ -38,7 +38,7 @@ public class CsMController {
 
         String sessionId = request.getSession().getId();
         String userId = sessionRepository.findByJSessionId(sessionId).get(0).getUserId();
-        ModelAndView modelAndView = new ModelAndView("cs/cs_main");
+        ModelAndView modelAndView = new ModelAndView("cs/cs-main");
         modelAndView.addObject("userId", userId);
         modelAndView.addObject("userType", sessionRepository.findByJSessionId(sessionId).get(0).getType());
         return modelAndView;

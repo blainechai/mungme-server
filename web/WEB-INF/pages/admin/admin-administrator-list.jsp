@@ -116,7 +116,7 @@
                             <th width="20%" class="text-center">관리자 이름</th>
                             <th width="20%" class="text-center">비밀번호</th>
                             <th width="20%" class="text-center">생성일</th>
-                            <th width="20%" class="text-center">그룹</th>
+                            <%--<th width="20%" class="text-center">그룹</th>--%>
                             <th class="text-center shrink" style="text-align: left!important;">
                                 <button class="btn btn-primary btn-register"
                                         style="width: 100%;" onclick="joinAdminUserClickHandler(this);return false;">생성
@@ -216,7 +216,7 @@
     });
 
     function userDeleteCheck() {
-        if ($('#admin-shop-list-table tbody tr').size() <= 1) {
+        if ($('#admin-admin-list-table tbody tr').size() <= 1) {
             alert('관리자 계정은 모두 삭제할 수 없습니다');
             return false;
         } else {
@@ -271,7 +271,7 @@
     }
 
     function addListTd(data) {
-        var tbody = $('#admin-shop-list-table tbody');
+        var tbody = $('#admin-user-list-table tbody');
         tbody.children().remove();
         $.each(data, function (i, d) {
             var trEl = $('<tr>' +
@@ -279,7 +279,7 @@
                     '<td class="text-center username-td"></td>' +
                     '<td class="text-center password-td">********</td>' +
                     '<td class="text-center create-date-td"></td>' +
-                    '<td class="text-center group-td"></td>' +
+//                    '<td class="text-center group-td"></td>' +
                     '<td class="text-center shrink">' +
                     '<button class="btn btn-primary" style="margin-right: 5px;" name="userId" value="" onclick="modifyAdminUserClickHandler(this);return false;">수정</button>' +
 //                    '<form action="/admin/admin-account/delete" method="post" onsubmit="return userDeleteCheck();">' +
@@ -290,11 +290,12 @@
             trEl.find('.username-td').text(d.username);
             trEl.find('.create-date-td').text(d.createDate);
             trEl.find('button[name=userId]').val(d.userId);
-            $.each(d.userGroups, function (i, g) {
-                var tmpEl = $('<span style="padding-right: 5px;"></span>');
-                tmpEl.text(g.groupName.groupName);
-                trEl.find('.group-td').append(tmpEl);
-            });
+//            $.each(d.userGroups, function (i, g) {
+//                var tmpEl = $('<span style="padding-right: 5px;"></span>');
+//                tmpEl.text(g.groupName.groupName);
+//                trEl.find('.group-td').append(tmpEl);
+//            });
+            console.error(trEl);
             tbody.append(trEl);
         });
     }
@@ -323,7 +324,7 @@
             });
         }
     }
-
+/*
     function modifyAdminUserClickHandler(element) {
         var el = $(element);
         var tarTr = el.parent().parent();
@@ -419,7 +420,7 @@
 
 
     }
-
+*/
     function joinAdminUserClickHandler(element) {
         var el = $(element);
         var tarTr = el.parent().parent();

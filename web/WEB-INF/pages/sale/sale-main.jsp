@@ -21,32 +21,7 @@
 
 <div class="container">
     <div class="row">
-        <div id="left-menu-menu-container" class="left-menu-container col-xs-3">
-            <div class="shop-name-container">
-                <div class="shop-name">
-                    순이네 펫 미용실
-                </div>
-                <div style="margin-top: 9px;width: 155px;height: 16px;font-family: 'Nanum Gothic';font-size: 14px;font-weight: normal;font-style: normal;font-stretch: normal;letter-spacing: -0.2px;color: rgba(189, 189, 189, 0.87);">
-                    이용자 정보를 검색하세요.
-                </div>
-            </div>
-            <div class="search-input-container">
-                <input id="search-input" type="text" class="search-input"
-                       style="width: 165px;height: 53.3px;object-fit: contain;background-color: #fbfbfb;box-shadow: 0 2px 4px 0 rgba(172, 172, 172, 0.5);border: 0;">
-                <img src="/imgs/search-icon.png" alt="search"
-                     style="height: 62px;object-fit: contain;position: absolute;right: -3px;top: -2px;">
-            </div>
-            <div id="left-nav" style="">
-                <div class="left-nav-menu" style="">기본정보 관리<span
-                        class="glyphicon glyphicon-chevron-right left-nav-menu-arrow"></span></div>
-                <div class="left-nav-menu" style="">자원 관리<span
-                        class="glyphicon glyphicon-chevron-right left-nav-menu-arrow"></span></div>
-                <div class="left-nav-menu" style="">예약문자 설정<span
-                        class="glyphicon glyphicon-chevron-right left-nav-menu-arrow"></span></div>
-                <div class="left-nav-menu" style="">휴무 관리<span
-                        class="glyphicon glyphicon-chevron-right left-nav-menu-arrow"></span></div>
-            </div>
-        </div>
+        <jsp:include page="sale-left-menu.jsp" flush="false"/>
         <div id="right-content-container" class="right-content-container col-xs-12">
             <div class="category-nav">
                 <span class="category-name">홈<span
@@ -186,20 +161,6 @@
         </div>
     </div>
 </div>
-<div class="footer-container">
-    <div class="footer">
-        <div class="left-footer col-xs-3">
-            <div class="service-name">펫살롱</div>
-        </div>
-        <div class="right-footer col-xs-12">
-            <div class="service-detail">(주) 정 코스메틱 | 대표 : 배세철 | 전화:1661-3758
-                사업자등록번호 : 309-88-00093 | Fax : 0505-507-3720｜e-mail : jungcosmetic@jungco.co.kr
-                주소 : 충청남도 아산시 신창면 순천향로 22, 5층 B501호 순천향대학교 내 산학협력관
-                통신판매업신고번호 : 제 2015-충남아산-0179호 | 개인정보관리자 : 배세철
-                Copyright (C) 2015 JUNG COSMETICS. All rights Reserved. Created by Neversunset Technology.
-            </div>
-        </div>
-    </div>
-</div>
+<jsp:include page="../footer.jsp" flush="false"/>
 </body>
 </html>

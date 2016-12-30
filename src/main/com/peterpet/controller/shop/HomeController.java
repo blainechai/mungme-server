@@ -39,9 +39,9 @@ public class HomeController {
         Map<String, ?> fm = RequestContextUtils.getInputFlashMap(request);
         if (fm != null) {
             String message = (String) fm.get("loginFail");
-            return new ModelAndView("user_login").addObject("loginFail", message);
+            return new ModelAndView("user-login").addObject("loginFail", message);
         } else {
-            return new ModelAndView("user_login")
+            return new ModelAndView("user-login")
                     .addObject("adminAccountSize", userAccountRepository.findByType(UserType.ADMIN).size())
                     .addObject("loginFail", "false");
         }
@@ -52,7 +52,7 @@ public class HomeController {
 
         String sessionId = request.getSession().getId();
         String userId = sessionRepository.findByJSessionId(sessionId).get(0).getUserId();
-        ModelAndView modelAndView = new ModelAndView("home/home_main");
+        ModelAndView modelAndView = new ModelAndView("reservation/reservation-reserve");
         modelAndView.addObject("userId", userId);
         modelAndView.addObject("userType", sessionRepository.findByJSessionId(sessionId).get(0).getType());
         return modelAndView;
@@ -75,7 +75,7 @@ public class HomeController {
 
     @RequestMapping(value = "/register")
     public String registerPage(HttpServletRequest request) {
-        return "user_join";
+        return "user-join";
     }
 
 

@@ -37,7 +37,13 @@
                      style="height: 62px;object-fit: contain;position: absolute;right: -3px;top: -2px;">
             </div>
             <div id="left-nav" style="">
-                <div class="left-nav-menu" style="">고객 관리<span
+                <div class="left-nav-menu" style="">기본정보 관리<span
+                        class="glyphicon glyphicon-chevron-right left-nav-menu-arrow"></span></div>
+                <div class="left-nav-menu" style="">자원 관리<span
+                        class="glyphicon glyphicon-chevron-right left-nav-menu-arrow"></span></div>
+                <div class="left-nav-menu" style="">예약문자 설정<span
+                        class="glyphicon glyphicon-chevron-right left-nav-menu-arrow"></span></div>
+                <div class="left-nav-menu" style="">휴무 관리<span
                         class="glyphicon glyphicon-chevron-right left-nav-menu-arrow"></span></div>
             </div>
         </div>
@@ -180,19 +186,6 @@
         </div>
     </div>
 </div>
-<div class="footer-container">
-    <div class="footer">
-        <div class="left-footer col-xs-3">
-            <div class="service-name">펫살롱</div>
-        </div>
-        <div class="right-footer col-xs-12">
-            <div class="service-detail">(주) 정 코스메틱 | 대표 : 배세철 | 전화:1661-3758
-                사업자등록번호 : 309-88-00093 | Fax : 0505-507-3720｜e-mail : jungcosmetic@jungco.co.kr
-                주소 : 충청남도 아산시 신창면 순천향로 22, 5층 B501호 순천향대학교 내 산학협력관
-                통신판매업신고번호 : 제 2015-충남아산-0179호 | 개인정보관리자 : 배세철
-                Copyright (C) 2015 JUNG COSMETICS. All rights Reserved. Created by Neversunset Technology.</div>
-        </div>
-    </div>
-</div>
+<jsp:include page="../footer.jsp" flush="false"/>
 </body>
 </html>

@@ -43,9 +43,9 @@ public class AdminController {
         }
         if (fm != null) {
             String message = (String) fm.get("loginFail");
-            return new ModelAndView("admin/admin_login").addObject("loginFail", message);
+            return new ModelAndView("admin/admin-login").addObject("loginFail", message);
         } else {
-            return new ModelAndView("admin/admin_login")
+            return new ModelAndView("admin/admin-login")
                     .addObject("adminAccountSize", userAccountRepository.findByType(UserType.ADMIN).size())
                     .addObject("loginFail", "false");
 
@@ -109,7 +109,7 @@ public class AdminController {
     @RequestMapping(value = "/admin-account")
     public ModelAndView list() {
         List<UserAccount> adminList = userAccountRepository.findByType(UserType.ADMIN);
-        ModelAndView modelAndView = new ModelAndView("admin/admin_administrator_list");
+        ModelAndView modelAndView = new ModelAndView("admin/admin-administrator-list");
 //        modelAndView.addObject("adminList", adminList);
         return modelAndView;
     }
@@ -180,7 +180,7 @@ public class AdminController {
         } else {
             adminList = new ArrayList<UserAccount>();
         }
-        ModelAndView modelAndView = new ModelAndView("admin/admin_administrator_list");
+        ModelAndView modelAndView = new ModelAndView("admin/admin-administrator-list");
         modelAndView.addObject("adminList", adminList);
         return modelAndView;
     }
@@ -312,7 +312,7 @@ public class AdminController {
 
     @RequestMapping(value = "/user")
     public ModelAndView userList() {
-        ModelAndView modelAndView = new ModelAndView("admin/admin_user_list");
+        ModelAndView modelAndView = new ModelAndView("admin/admin-user-list");
         modelAndView.addObject("adminList", getAllUserAccountApis());
         return modelAndView;
     }
