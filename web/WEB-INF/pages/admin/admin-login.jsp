@@ -1,10 +1,11 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <title>Server Admin</title>
     <link href="../css/login.css" rel="stylesheet" type="text/css">
 </head>
@@ -35,7 +36,7 @@
                                 <label class="login-field-icon fui-lock"></label>
                             </div>
 
-                            <input type="submit" class="btn btn-primary btn-large btn-block" value="join">
+                            <button type="submit" class="btn btn-primary btn-large btn-block">join</button>
                         </div>
                     </form>
                 </c:when>
@@ -56,7 +57,7 @@
                                 <label class="login-field-icon fui-lock"></label>
                             </div>
 
-                            <input type="submit" class="btn btn-primary btn-large btn-block" value="login">
+                            <button type="submit" class="btn btn-primary btn-large btn-block">login</button>
                         </div>
                     </form>
                 </c:otherwise>

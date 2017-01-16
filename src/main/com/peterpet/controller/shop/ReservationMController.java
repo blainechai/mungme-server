@@ -1,5 +1,6 @@
 package com.peterpet.controller.shop;
 
+import com.peterpet.constant.MenuConstant;
 import com.peterpet.domain.UserAccount;
 import com.peterpet.exception.SessionNotFoundException;
 import com.peterpet.exception.UserIdNotFoundException;
@@ -19,6 +20,8 @@ import javax.servlet.http.HttpServletRequest;
 @Controller
 @RequestMapping("main/reservation")
 public class ReservationMController {
+
+    private final static String MENU_NAME = MenuConstant.RESERVATION;
 
     @Autowired
     private SessionRepository sessionRepository;

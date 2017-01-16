@@ -3,6 +3,7 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <title>Server Admin - admin 사용자 관리</title>
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <script src="/js/jquery-1.11.3.min.js"></script>

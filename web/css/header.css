@@ -90,6 +90,7 @@
     background: rgba(50, 50, 50, 0.1);
 }
 
+
 .header-btn img {
     padding-top: 10px;
     width: 57px;
@@ -114,7 +115,9 @@
     position: absolute;
     bottom: 23px;
 }
-
+.header-btn.active .header-btn-title{
+    color: #ed5565;
+}
 .category-nav {
 
 }

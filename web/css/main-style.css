@@ -11,6 +11,7 @@ body {
 
 .container {
     width: 1200px;
+    position: relative;
 }
 
 #left-nav {
@@ -103,6 +104,7 @@ body {
     border-bottom: 1px solid #d8d8d8;
     display: inline-block;
     width: 100%;
+    position: relative;
 }
 
 .shop-name-container {
@@ -150,8 +152,8 @@ body {
     width: 100%;
     box-shadow: 1px 1px 2px 0 rgba(183, 183, 183, 0.5);
     border-collapse: collapse;
-    border-top: 1px solid #dbdbdb;;
-    border-left: 1px solid #dbdbdb;;
+    border-top: 1px solid #dbdbdb;
+    border-left: 1px solid #dbdbdb;
     display: inline-block;
 }
 
@@ -184,8 +186,8 @@ body {
 }
 
 .input-table-td {
-    border-bottom: 1px solid #dbdbdb;;
-    border-right: 1px solid #dbdbdb;;
+    border-bottom: 1px solid #dbdbdb;
+    border-right: 1px solid #dbdbdb;
     /*border: solid 1px #dbdbdb;*/
 }
 
@@ -252,7 +254,7 @@ body {
 .service-detail {
     font-family: 'Nanum Gothic';
     font-size: 15px;
-    font-weight: bold;
+    /*font-weight: bold;*/
     font-style: normal;
     font-stretch: normal;
     line-height: 1.33;
@@ -336,6 +338,10 @@ body {
     color: #ffffff;
 }
 
+.customer-register-btn:hover, .customer-register-btn:hover {
+    background-color: rgba(237, 85, 101, 0.8);
+}
+
 .pager-module-container {
     width: 100%;
     display: flex;
@@ -381,6 +387,10 @@ body {
     line-height: 43px;
 }
 
+.customer-list-table {
+    font-family: 'Nanum Gothic'
+}
+
 .customer-list-table > thead tr {
     background-color: #f9f9f9;
     box-shadow: 1px 1px 2px 0 rgba(175, 175, 175, 0.5);
@@ -397,4 +407,260 @@ body {
     text-align: center;
     /*border-bottom: 1px solid #dbdbdb;*/
     /*border-right: 1px solid #dbdbdb;*/
+}
+
+.customer-simple {
+    width: 540px;
+    height: 516px;
+    background-color: #f8f8f8;
+    box-shadow: 3px 6px 6px 0 rgba(204, 204, 204, 0.5);
+    position: absolute;
+    top: 187px;
+    left: 400px;
+}
+
+.customer-simple-input-container {
+    width: 289px;
+    position: absolute;
+    left: 109px;
+    top: 127px;
+    text-align: center;
+}
+
+.customer-simple-input-container input {
+    background-color: #f4f4f4;
+    border: solid 1px #dbdbdb;
+    height: 53px;
+    font-size: 15px;
+    padding-left: 15px;
+    width: 100%;
+    margin-bottom: 6px;
+    margin-left: 3px;
+}
+
+.customer-simple-remove-btn {
+    vertical-align: middle;
+    font-size: 22px;
+    color: #ed5565;
+    top: 26px;
+    right: 20px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.customer-simple-remove-btn:hover, .customer-simple-remove-btn:active {
+    color: rgba(237, 85, 101, 0.7);
+}
+
+.reservation-reserve-menu-btn {
+    width: 105px;
+    height: 43px;
+    object-fit: contain;
+    border-radius: 5px;
+    background-color: #f6f6f6;
+    box-shadow: 1px 1px 1px 0 rgba(137, 137, 137, 0.5);
+    border: solid 1px #c6c6c6;
+    font-family: Nanum Gothic;
+    /*font-weight: bold;*/
+    color: rgba(132, 132, 132, 0.87);
+    font-size: 15px;
+}
+
+.reservation-reserve-menu-btn.active {
+    background-color: #f6f6f6;
+    border: solid 1px #ed5565;
+    letter-spacing: -0.3px;
+    color: #ed5565;
+}
+
+.reservation-reserve-dropdown-btn {
+    margin-left: 10px;
+    padding: 10px 13px 10px 13px;
+    font-family: Nanum Gothic;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: -0.3px;
+    color: rgba(132, 132, 132, 0.87);
+    object-fit: contain;
+    background-color: #f6f6f6;
+    box-shadow: 1px 1px 1px 0 rgba(137, 137, 137, 0.5);
+    border: solid 1px #c6c6c6;
+}
+
+.calender-period-btn {
+    font-family: Nanum Gothic;
+    width: 105px;
+    height: 37px;
+    object-fit: contain;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #f6f6f6;
+    box-shadow: 1px 0 0 0 rgba(137, 137, 137, 0.5);
+    border: 0;
+    font-weight: bold;
+    letter-spacing: -0.3px;
+    font-size: 15px;
+    font-style: normal;
+    font-stretch: normal;
+    color: rgba(132, 132, 132, 0.87);
+}
+
+.calender-period-btn.active,
+.calender-period-btn:hover,
+.calender-period-btn:active {
+    color: #ed5565;
+    box-shadow: none;
+    background-color: #fff;
+}
+
+.calendar-container {
+    position: relative;
+
+}
+
+.green-circle {
+    width: 14px;
+    height: 14px;
+    background-color: #59ff59;
+    content: '';
+    display: block;
+    border-radius: 50%;
+    float: left;
+}
+
+.blue-circle {
+    width: 14px;
+    height: 14px;
+    background-color: #44adc4;
+    content: '';
+    display: block;
+    border-radius: 50%;
+    float: left;
+}
+
+.orange-circle {
+    width: 14px;
+    height: 14px;
+    background-color: #ffbb59;
+    content: '';
+    display: block;
+    border-radius: 50%;
+    float: left;
+}
+
+.red-circle {
+    width: 14px;
+    height: 14px;
+    background-color: #ff0000;
+    content: '';
+    display: block;
+    border-radius: 50%;
+    float: left;
+}
+
+.calendar-info {
+    height: 86px;
+    line-height: 86px;
+    width: 100%;
+    background-color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: -0.2px;
+    color: #ed5565;
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+.calendar-header > div {
+    float: left;
+    width: 134px;
+    line-height: 40px;
+    padding-left: 12px;
+    height: 40px;
+    font-family: NanumGothic;
+    font-size: 14.5px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: -0.3px;
+    color: #242424;
+}
+
+.shop-info-input {
+    width: 416px;
+    height: 35px;
+    object-fit: contain;
+    /*opacity: 0.3;*/
+    background-color: #f9f9f9;
+    box-shadow: 1px 1px 1px 0 rgba(104, 104, 104, 0.1);
+    border: solid 1px rgba(104, 104, 104, 0.1);
+    margin-top: 5px;
+    margin-left: 7px;
+    padding-left: 10px;
+    color: rgba(132, 132, 132, 0.87);
+}
+
+.shop-info-input:disabled {
+    color: rgba(205, 205, 205, 0.87);
+}
+
+.shop-info-span {
+    margin-left: 20px;
+    height: 16px;
+    line-height: 45px;
+    font-family: NanumGothic;
+    font-size: 14px;
+    /*font-weight: bold;*/
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: -0.3px;
+    color: rgba(132, 132, 132, 0.87);
+}
+
+button {
+    object-fit: contain;
+    opacity: 0.8;
+    border-radius: 3px;
+    background-image: linear-gradient(to bottom, #3e4261, #15182b);
+    box-shadow: 1px 1px 1px 0 rgba(104, 104, 104, 0.5);
+    border: solid 1px #000000;
+    font-family: NanumGothic;
+    font-size: 14px;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: -0.3px;
+    color: rgba(255, 255, 255, 0.87);
+}
+
+.input-table-td button {
+    margin-left: 30px;
+    height: 35px;
+    padding: 0 10px 0 10px;
+}
+
+.input-table-td label{
+    margin: 0;
+    font-weight: normal;
+    font-family: NanumGothic;
+    font-size: 15px;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: -0.2px;
+    color: rgba(66, 66, 66, 0.87);
+    line-height: 45px;
+    margin-right: 33px;
+}
+
+.shop-business-communication-info{
+    font-family: NanumGothic;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: -0.2px;
+    color: rgba(106, 106, 106, 0.87);
 }

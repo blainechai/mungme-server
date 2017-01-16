@@ -43,8 +43,8 @@
                                name="phone">
                         <label class="login-field-icon fui-user"></label>
                     </div>
-                    <input type="submit" class="btn btn-primary btn-large btn-block" value="join"
-                           style="cursor: pointer;">
+                    <button type="submit" class="btn btn-primary btn-large btn-block"
+                           style="cursor: pointer;">join</button>
                 </div>
             </form>
         </div>

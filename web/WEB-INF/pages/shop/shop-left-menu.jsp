@@ -15,13 +15,15 @@
              style="height: 62px;object-fit: contain;position: absolute;right: -3px;top: -2px;">
     </div>
     <div id="left-nav" style="">
-        <div class="left-nav-menu" style="">기본정보 관리<span
+        <div class="left-nav-menu shop-info" style="">기본 정보 관리<span
                 class="glyphicon glyphicon-chevron-right left-nav-menu-arrow"></span></div>
-        <div class="left-nav-menu" style="">자원 관리<span
+        <div class="left-nav-menu shop-service" style="">서비스 관리<span
                 class="glyphicon glyphicon-chevron-right left-nav-menu-arrow"></span></div>
-        <div class="left-nav-menu" style="">예약문자 설정<span
+        <div class="left-nav-menu shop-designer" style="">미용사 관리<span
                 class="glyphicon glyphicon-chevron-right left-nav-menu-arrow"></span></div>
-        <div class="left-nav-menu" style="">휴무 설정<span
+        <div class="left-nav-menu shop-day-off" style="">휴무 관리<span
+                class="glyphicon glyphicon-chevron-right left-nav-menu-arrow"></span></div>
+        <div class="left-nav-menu shop-event" style="">이벤트 관리<span
                 class="glyphicon glyphicon-chevron-right left-nav-menu-arrow"></span></div>
     </div>
 </div>

@@ -21,6 +21,7 @@
 <%--<html lang="en">--%>
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width">
     <meta charset="utf-8">
     <title>Server Admin</title>
     <%--<meta name="generator" content="Bootply"/>--%>

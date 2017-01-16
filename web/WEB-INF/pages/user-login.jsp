@@ -32,7 +32,7 @@
                     </div>
 
                     <div class="control-group">
-                        <input type="submit" class="btn btn-primary btn-large btn-block" value="login" style="cursor: pointer;">
+                        <button type="submit" class="btn btn-large"  style="cursor: pointer;">login</button>
                     </div>
                     <div class="control-group">
                         <a href="/register" type="button" class="btn btn-primary btn-large btn-block">register</a>

@@ -22,7 +22,7 @@
 
 <div class="container">
     <div class="row">
-        <jsp:include page="cs-left-menu.jsp" flush="false"/>
+        <jsp:include page="shop-left-menu.jsp" flush="false"/>
         <div id="right-content-container" class="right-content-container col-xs-12">
             <div class="category-nav">
                 <span class="category-name">홈<span
@@ -163,5 +163,12 @@
     </div>
 </div>
 <jsp:include page="../footer.jsp" flush="false"/>
+<script type="text/javascript">
+    $(function(){
+        var menu = $(".header-${menu}-btn").addClass('active');
+        menu.find('img').attr('src', menu.find('img').attr('src').replace('.png', "-active.png"));
+        var submenu = $(".${submenu}").addClass('active');
+    });
+</script>
 </body>
 </html>

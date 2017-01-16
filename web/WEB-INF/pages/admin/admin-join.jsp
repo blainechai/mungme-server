@@ -5,6 +5,7 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <title>Server Admin</title>
     <link href="/css/login.css" rel="stylesheet" type="text/css">
 </head>
@@ -32,7 +33,7 @@
                         <label class="login-field-icon fui-lock"></label>
                     </div>
 
-                    <input type="submit" class="btn btn-primary btn-large btn-block" value="join">
+                    <button type="submit" class="btn btn-primary btn-large btn-block" >join</button>
                 </div>
             </form>
         </div>

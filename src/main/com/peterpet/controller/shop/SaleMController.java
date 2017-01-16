@@ -1,5 +1,6 @@
 package com.peterpet.controller.shop;
 
+import com.peterpet.constant.MenuConstant;
 import com.peterpet.repository.SessionRepository;
 import com.peterpet.repository.UserAccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,8 @@ import javax.servlet.http.HttpServletRequest;
 @Controller
 @RequestMapping("main/sale")
 public class SaleMController {
+
+    private final static String MENU_NAME = MenuConstant.SALE;
 
     @Autowired
     private SessionRepository sessionRepository;

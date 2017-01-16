@@ -1,5 +1,6 @@
 package com.peterpet.controller.shop;
 
+import com.peterpet.constant.MenuConstant;
 import com.peterpet.domain.UserAccount;
 import com.peterpet.exception.SessionNotFoundException;
 import com.peterpet.exception.UserIdNotFoundException;
@@ -20,6 +21,8 @@ import javax.servlet.http.HttpServletRequest;
 @RequestMapping("main/shop")
 public class ShopMController {
 
+    private final static String MENU_NAME = MenuConstant.SHOP;
+
     @Autowired
     private SessionRepository sessionRepository;
 
@@ -35,6 +38,8 @@ public class ShopMController {
             ModelAndView modelAndView = new ModelAndView("shop/shop-info");
             modelAndView.addObject("userId", userId);
             modelAndView.addObject("userType", userAccount.getType());
+            modelAndView.addObject("menu", MENU_NAME);
+            modelAndView.addObject("submenu", MenuConstant.SHOP_INFO);
             return modelAndView;
         } catch (UserIdNotFoundException e) {
             e.printStackTrace();
@@ -53,6 +58,8 @@ public class ShopMController {
             ModelAndView modelAndView = new ModelAndView("shop/shop-info");
             modelAndView.addObject("userId", userId);
             modelAndView.addObject("userType", userAccount.getType());
+            modelAndView.addObject("menu", MENU_NAME);
+            modelAndView.addObject("submenu", MenuConstant.SHOP_INFO);
             return modelAndView;
         } catch (UserIdNotFoundException e) {
             e.printStackTrace();
@@ -62,15 +69,17 @@ public class ShopMController {
         return new ModelAndView("error");
     }
 
-    @RequestMapping(value = {"resource"})
+    @RequestMapping(value = {"service"})
     public ModelAndView resourcePage(HttpServletRequest request) {
         try {
             UserAccount userAccount = new LoginUtil(userAccountRepository, sessionRepository).getUserAccount(request);
 //            String sessionId = request.getSession().getId();
             String userId = userAccount.getUserId();
-            ModelAndView modelAndView = new ModelAndView("shop/shop-resource");
+            ModelAndView modelAndView = new ModelAndView("shop/shop-service");
             modelAndView.addObject("userId", userId);
             modelAndView.addObject("userType", userAccount.getType());
+            modelAndView.addObject("menu", MENU_NAME);
+            modelAndView.addObject("submenu", MenuConstant.SHOP_SERVICE);
             return modelAndView;
         } catch (UserIdNotFoundException e) {
             e.printStackTrace();
@@ -80,15 +89,17 @@ public class ShopMController {
         return new ModelAndView("error");
     }
 
-    @RequestMapping(value = {"sms"})
+    @RequestMapping(value = {"designer"})
     public ModelAndView smsPage(HttpServletRequest request) {
         try {
             UserAccount userAccount = new LoginUtil(userAccountRepository, sessionRepository).getUserAccount(request);
 //            String sessionId = request.getSession().getId();
             String userId = userAccount.getUserId();
-            ModelAndView modelAndView = new ModelAndView("shop/shop-sms");
+            ModelAndView modelAndView = new ModelAndView("shop/shop-designer");
             modelAndView.addObject("userId", userId);
             modelAndView.addObject("userType", userAccount.getType());
+            modelAndView.addObject("menu", MENU_NAME);
+            modelAndView.addObject("submenu", MenuConstant.SHOP_DESIGNER);
             return modelAndView;
         } catch (UserIdNotFoundException e) {
             e.printStackTrace();
@@ -107,6 +118,28 @@ public class ShopMController {
             ModelAndView modelAndView = new ModelAndView("shop/shop-day-off");
             modelAndView.addObject("userId", userId);
             modelAndView.addObject("userType", userAccount.getType());
+            modelAndView.addObject("menu", MENU_NAME);
+            modelAndView.addObject("submenu", MenuConstant.SHOP_DAY_OFF);
+            return modelAndView;
+        } catch (UserIdNotFoundException e) {
+            e.printStackTrace();
+        } catch (SessionNotFoundException e) {
+            e.printStackTrace();
+        }
+        return new ModelAndView("error");
+    }
+
+    @RequestMapping(value = {"event"})
+    public ModelAndView eventPage(HttpServletRequest request) {
+        try {
+            UserAccount userAccount = new LoginUtil(userAccountRepository, sessionRepository).getUserAccount(request);
+//            String sessionId = request.getSession().getId();
+            String userId = userAccount.getUserId();
+            ModelAndView modelAndView = new ModelAndView("shop/shop-event");
+            modelAndView.addObject("userId", userId);
+            modelAndView.addObject("userType", userAccount.getType());
+            modelAndView.addObject("menu", MENU_NAME);
+            modelAndView.addObject("submenu", MenuConstant.SHOP_EVENT);
             return modelAndView;
         } catch (UserIdNotFoundException e) {
             e.printStackTrace();

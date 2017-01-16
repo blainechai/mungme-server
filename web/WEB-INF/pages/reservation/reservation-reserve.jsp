@@ -5,6 +5,7 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <title>MUNGME</title>
 
     <link rel="stylesheet" href="/css/bootstrap.css">
@@ -26,137 +27,51 @@
             <div class="category-nav">
                 <span class="category-name">홈<span
                         class="glyphicon glyphicon-triangle-right category-name-separator"></span></span><span
-                    class="category-name">매장관리<span
+                    class="category-name">예약관리<span
                     class="glyphicon glyphicon-triangle-right category-name-separator"></span></span><span
-                    class="category-name">기본정보관리</span>
+                    class="category-name">예약내역</span>
             </div>
             <div class="sub-menu-container">
                 <div class="sub-menu-name-container">
                     <div style="width: 4px;height: 18px;object-fit: contain;background-color: #ed5565;float: left;margin-top: 2px;margin-right: 15px;"></div>
-                    기본정보 관리
+                    예약 관리
                 </div>
-                <div class="sub-menu-description">
-                    - 상점의 기초적인 상점명 및 관리자 정보를 입력 또는 인증할 수 있습니다.
-                </div>
-                <div class="input-table">
-                    <div class="input-table-row">
-                        <div class="input-title-container input-table-td">상점명</div>
-                        <div class="input-content-container input-table-td"></div>
+                <div class="sub-menu-name-container" style="height: 65px;padding-top: 10px;margin-bottom: 31px;">
+                    <div class="radio-btn-container" style="position: absolute;">
+                        <button class="reservation-reserve-menu-btn calendar-btn active">캘린더</button>
+                        <button class="reservation-reserve-menu-btn book-list-btn">현황</button>
                     </div>
-                    <div class="input-table-row">
-                        <div class="input-title-container input-table-td">관리자명</div>
-                        <div class="input-content-container input-table-td"></div>
-                    </div>
-                    <div class="input-table-row">
-                        <div class="input-title-container input-table-td">상점 아이디</div>
-                        <div class="input-content-container input-table-td"></div>
-                    </div>
-                    <div class="input-table-row">
-                        <div class="input-title-container input-table-td">관리자 이메일</div>
-                        <div class="input-content-container input-table-td"></div>
-                    </div>
-                    <div class="input-table-row">
-                        <div class="input-title-container input-table-td">관리자 휴대전화</div>
-                        <div class="input-content-container input-table-td"></div>
+                    <div style="position: absolute; right: 0;">
+                        <button class="reservation-reserve-dropdown-btn customer-set-artist-tn"><span>담당 미용사</span><span
+                                class="custom-caret-down"></span></button>
+                        <button class="reservation-reserve-dropdown-btn customer-show-num-btn"><span>10개씩 보기</span><span
+                                class="custom-caret-down"></span></button>
                     </div>
                 </div>
-            </div>
-            <div class="sub-menu-container">
-                <div class="sub-menu-name-container">
-                    <div style="width: 4px;height: 18px;object-fit: contain;background-color: #ed5565;float: left;margin-top: 2px;margin-right: 15px;"></div>
-                    상점 사업자 정보 설정
-                </div>
-                <div class="sub-menu-description">
-                    - 실제 운영될 상점 사업자 정보 및 대표 연락처를 입력할 수 있으며, 입력한 정보는 상점 화면에 노출됩니다.
-                </div>
-                <div class="input-table">
-                    <div class="input-table-row">
-                        <div class="input-title-container input-table-td">사업자등록번호</div>
-                        <div class="input-content-container input-table-td"></div>
+                <div class="calendar-container">
+                    <div style="position: absolute;right: 0;">
+                        <span class="green-circle"></span><span class="blue-circle"></span><span
+                            class="orange-circle"></span><span class="red-circle"></span>
+
                     </div>
-                    <div class="input-table-row">
-                        <div class="input-title-container input-table-td">상호(법인명)</div>
-                        <div class="input-content-container input-table-td"></div>
+                    <div class="calender-period-btn-container">
+                        <button class="calender-period-btn period-month active">월별</button>
+                        <button class="calender-period-btn period-week">주별</button>
+                        <button class="calender-period-btn period-day">일별</button>
                     </div>
-                    <div class="input-table-row">
-                        <div class="input-title-container input-table-td">대표자 성명</div>
-                        <div class="input-content-container input-table-td"></div>
-                    </div>
-                    <div class="input-table-row">
-                        <div class="input-title-container input-table-td">업태</div>
-                        <div class="input-content-container input-table-td"></div>
-                    </div>
-                    <div class="input-table-row">
-                        <div class="input-title-container input-table-td">종목</div>
-                        <div class="input-content-container input-table-td"></div>
-                    </div>
-                    <div class="input-table-row">
-                        <div class="input-title-container input-table-td">사업장 주소</div>
-                        <div class="input-content-container input-table-td"></div>
-                    </div>
-                    <div class="input-table-row">
-                        <div class="input-title-container input-table-td">종목</div>
-                        <div class="input-content-container input-table-td"></div>
-                    </div>
-                    <div class="input-table-row">
-                        <div class="input-title-container input-table-td">사업장 주소</div>
-                        <div class="input-content-container input-table-td"></div>
-                    </div>
-                    <div class="input-table-row">
-                        <div class="input-title-container input-table-td">사업장 주소</div>
-                        <div class="input-content-container input-table-td"></div>
-                    </div>
-                    <div class="input-table-row">
-                        <div class="input-title-container input-table-td">사업장 주소</div>
-                        <div class="input-content-container input-table-td"></div>
-                    </div>
-                    <div class="input-table-row">
-                        <div class="input-title-container input-table-td">대표 전화</div>
-                        <div class="input-content-container input-table-td"></div>
-                    </div>
-                    <div class="input-table-row">
-                        <div class="input-title-container input-table-td">대표 팩스</div>
-                        <div class="input-content-container input-table-td"></div>
-                    </div>
-                    <div class="input-table-row">
-                        <div class="input-title-container input-table-td">대표 이메일</div>
-                        <div class="input-content-container input-table-td"></div>
-                    </div>
-                    <div class="input-table-row">
-                        <div class="input-title-container input-table-td">매장 홈페이지</div>
-                        <div class="input-content-container input-table-td"></div>
-                    </div>
-                    <div class="input-table-row">
-                        <div class="input-title-container input-table-td">통신판매업 신고</div>
-                        <div class="input-content-container input-table-td"></div>
-                    </div>
-                    <div class="input-table-row">
-                        <div class="input-title-container input-table-td">통신판매신고 번호</div>
-                        <div class="input-content-container input-table-td"></div>
+                    <div class="calendar-info">월별 캘린더, 휴무, 예약현황</div>
+                    <div class="calendar" style="height: 500px;background: #fff;">
+                        <div class="calendar-header" style="display: inline-block;">
+                            <div>Sun</div>
+                            <div>Mon</div>
+                            <div>Tue</div>
+                            <div>Wed</div>
+                            <div>Thu</div>
+                            <div>Fri</div>
+                            <div>Sat</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="sub-menu-container">
-                <div class="sub-menu-name-container">
-                    <div style="width: 4px;height: 18px;object-fit: contain;background-color: #ed5565;float: left;margin-top: 2px;margin-right: 15px;"></div>
-                    상점 사업자 정보 설정
-                </div>
-                <div class="sub-menu-description">
-                    - 실제 운영될 상점 사업자 정보 및 대표 연락처를 입력할 수 있으며, 입력한 정보는 상점 화면에 노출됩니다.
-                </div>
-                <div class="input-table">
-                    <div class="input-table-row">
-                        <div class="input-title-container input-table-td">모바일 표시여부</div>
-                        <div class="input-content-container input-table-td"></div>
-                    </div>
-                    <div class="input-table-row">
-                        <div class="input-title-container input-table-td">서비스 문의 안내</div>
-                        <div class="input-content-container input-table-td"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="save-btn-container">
-                <button class="btn save-btn">저장</button>
             </div>
         </div>
     </div>
